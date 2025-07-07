@@ -6,13 +6,6 @@ const selectedIngredients = params.get("ingredient")?.split(",") || [];
 // Combine all available user items
 const userItems = [...selectedLiquors, ...selectedIngredients];
 
-// Step 2: Define the drink recipes
-const drinkRecipes = {
-  "Gin and Tonic": ["Gin", "Tonic Water"],
-  "Vodka Soda": ["Vodka", "Soda Water"]
-};
-
-// Step 3: Display selected liquors
 const liquorList = document.getElementById("liquorList");
 selectedLiquors.forEach(item => {
   const li = document.createElement("li");
