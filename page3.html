@@ -6,24 +6,27 @@
     <title>Drink Options</title>
     <script defer src="recipes.js"></script>
     <script defer src="page3script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <!--<link rel="stylesheet" href="styles.css">-->
 </head>
 <body>
-    <h1>Your Selected Items:</h1>
-    <h2>Liquors:</h2>
-    <p id="liquorList"></p>
-
-    <h2>Ingredients:</h2>
-    <p id="ingredientList"></p>
-
-    <div id="recipeSection">
+    <div class="page3-container">
+      <h1>Your Selected Items:</h1>
+  
+      <h2>Liquors:</h2>
+      <p id="liquorList"></p>
+  
+      <h2>Ingredients:</h2>
+      <p id="ingredientList"></p>
+  
+      <div id="recipeSection">
         <button id="spinButton">🎰 Spin the Wheel</button><br><br>
         <button id="revealButton">📋 List All Available Recipes</button>
-      
+  
         <div id="recipeListContainer" style="display: none; margin-top: 20px;">
           <h2>Matching Recipes:</h2>
           <ul id="matchingRecipes"></ul>
         </div>
-      </div>    
-</body>
+      </div>
+    </div>
+  </body>
 </html>
