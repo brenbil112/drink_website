@@ -3,13 +3,8 @@ const params = new URLSearchParams(window.location.search);
 const selectedLiquors = params.get("liquor"); // e.g., "Gin,Vodka"
 
 if (selectedLiquors) {
-  const liquorList = document.getElementById("selectedLiquors");
-
-  selectedLiquors.split(",").forEach(liquor => {
-    const li = document.createElement("li");
-    li.textContent = liquor;
-    liquorList.appendChild(li);
-  });
+  const list = document.getElementById('selectedLiquors');
+  list.textContent = selectedLiquors;
 }
 
 // Handle "Submit" button click

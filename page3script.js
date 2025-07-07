@@ -5,18 +5,10 @@ const selectedIngredients = params.get("ingredient")?.split(",") || [];
 const userItems = [...selectedLiquors, ...selectedIngredients];
 
 const liquorList = document.getElementById("liquorList");
-selectedLiquors.forEach(item => {
-  const li = document.createElement("li");
-  li.textContent = item;
-  liquorList.appendChild(li);
-});
+liquorList.textContent = selectedLiquors.join(", ");
 
 const ingredientList = document.getElementById("ingredientList");
-selectedIngredients.forEach(item => {
-  const li = document.createElement("li");
-  li.textContent = item;
-  ingredientList.appendChild(li);
-});
+ingredientList.textContent = selectedIngredients.join(", ");
 
 const matchList = document.getElementById("matchingRecipes");
 
