@@ -1,9 +1,7 @@
-// Step 1: Parse the query string
 const params = new URLSearchParams(window.location.search);
 const selectedLiquors = params.get("liquor")?.split(",") || [];
 const selectedIngredients = params.get("ingredient")?.split(",") || [];
 
-// Combine all available user items
 const userItems = [...selectedLiquors, ...selectedIngredients];
 
 const liquorList = document.getElementById("liquorList");
