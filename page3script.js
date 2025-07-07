@@ -43,4 +43,13 @@ Object.entries(drinkRecipes).forEach(([drinkName, recipe]) => {
       matchList.appendChild(li);
     }
 });
+
+document.getElementById("spinButton").addEventListener("click", function () {
+  alert("Future feature, coming soon!");
+});
+
+// Handle Reveal Recipes
+document.getElementById("revealButton").addEventListener("click", function () {
+  document.getElementById("recipeListContainer").style.display = "block";
+});
   
