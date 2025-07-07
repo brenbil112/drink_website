@@ -1,20 +1,44 @@
+// Step 1: Parse the query string
 const params = new URLSearchParams(window.location.search);
+const selectedLiquors = params.get("liquor")?.split(",") || [];
+const selectedIngredients = params.get("ingredient")?.split(",") || [];
 
-const liquors = params.get("liquor");
-const ingredients = params.get("ingredient");
+// Combine all available user items
+const userItems = [...selectedLiquors, ...selectedIngredients];
 
-if (liquors) {
-  liquors.split(",").forEach(item => {
+// Step 2: Define the drink recipes
+const drinkRecipes = {
+  "Gin and Tonic": ["Gin", "Tonic Water"],
+  "Vodka Soda": ["Vodka", "Soda Water"]
+};
+
+// Step 3: Display selected liquors
+const liquorList = document.getElementById("liquorList");
+selectedLiquors.forEach(item => {
+  const li = document.createElement("li");
+  li.textContent = item;
+  liquorList.appendChild(li);
+});
+
+// Step 4: Display selected ingredients
+const ingredientList = document.getElementById("ingredientList");
+selectedIngredients.forEach(item => {
+  const li = document.createElement("li");
+  li.textContent = item;
+  ingredientList.appendChild(li);
+});
+
+// Step 5: Find and display matching recipes
+const matchList = document.getElementById("matchingRecipes");
+
+Object.entries(drinkRecipes).forEach(([drinkName, requiredItems]) => {
+  const matches = requiredItems.every(item =>
+    userItems.includes(item)
+  );
+
+  if (matches) {
     const li = document.createElement("li");
-    li.textContent = item;
-    document.getElementById("liquorList").appendChild(li);
-  });
-}
-
-if (ingredients) {
-  ingredients.split(",").forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    document.getElementById("ingredientList").appendChild(li);
-  });
-}
+    li.textContent = drinkName;
+    matchList.appendChild(li);
+  }
+});
