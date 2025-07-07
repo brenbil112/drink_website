@@ -11,7 +11,6 @@ selectedLiquors.forEach(item => {
   liquorList.appendChild(li);
 });
 
-// Step 4: Display selected ingredients
 const ingredientList = document.getElementById("ingredientList");
 selectedIngredients.forEach(item => {
   const li = document.createElement("li");
@@ -19,17 +18,37 @@ selectedIngredients.forEach(item => {
   ingredientList.appendChild(li);
 });
 
-// Step 5: Find and display matching recipes
 const matchList = document.getElementById("matchingRecipes");
 
-Object.entries(drinkRecipes).forEach(([drinkName, requiredItems]) => {
-  const matches = requiredItems.every(item =>
-    userItems.includes(item)
-  );
-
-  if (matches) {
-    const li = document.createElement("li");
-    li.textContent = drinkName;
-    matchList.appendChild(li);
-  }
+Object.entries(drinkRecipes).forEach(([drinkName, recipe]) => {
+    const matches = recipe.ingredients.every(item =>
+      userItems.includes(item)
+    );
+  
+    if (matches) {
+      // Create clickable drink name
+      const li = document.createElement("li");
+  
+      const link = document.createElement("a");
+      link.href = "#";
+      link.textContent = drinkName;
+      link.style.cursor = "pointer";
+  
+      // Hidden paragraph with instructions
+      const instructions = document.createElement("p");
+      instructions.textContent = recipe.instructions;
+      instructions.style.display = "none"; // hidden initially
+  
+      // Toggle on click
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        instructions.style.display =
+          instructions.style.display === "none" ? "block" : "none";
+      });
+  
+      li.appendChild(link);
+      li.appendChild(instructions);
+      matchList.appendChild(li);
+    }
 });
+  
