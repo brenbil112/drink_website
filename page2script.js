@@ -10,3 +10,8 @@ if(selectedItems) {
     }
     );  
 }
+
+document.getElementById("moreItemForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Form submitted successfully!");
+})
