@@ -1,10 +1,9 @@
-document.getElementById("itemForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // Prevent the form from submitting normally
+document.getElementById("nextPageBtn").addEventListener("click", function () {
+    const selectedLiquors = Array.from(document.querySelectorAll('input[name="liquor"]:checked'))
+      .map(cb => cb.value);
 
-    const selected = Array.from(document.querySelectorAll('input[name="item"]:checked'))
-        .map(el => el.value);
-    
     const params = new URLSearchParams();
-    params.set("selected", selected.join(","));
+    params.set("liquor", selectedLiquors.join(","));
+
     window.location.href = "page2.html?" + params.toString();
-})
+  });
