@@ -1,18 +1,40 @@
 #bourbon {
-    background-color: #BA6F1E;
+    background: linear-gradient(to bottom, #d28b44, #BA6F1E);
     color: white;
-}
-
-#rye {
-    background-color: #A7441F;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  }
+  
+  #rye {
+    background: linear-gradient(to bottom, #c75a32, #A7441F);
     color: white;
-}
-
-#tequila {
-    background-color: #e6d795;
-}
-
-#rum {
-    background-color: #632a15;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  }
+  
+  #tequila {
+    background: linear-gradient(to bottom, #f7efc1, #e6d795);
+    color: #333;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  #rum {
+    background: linear-gradient(to bottom, #87412b, #632a15);
     color: white;
-}
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  }
+
+  .checkbox-button:has(input:checked) {
+    position: relative;
+  }
+  
+  .checkbox-button:has(input:checked)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(51, 153, 255, 0.3); /* translucent blue overlay */
+    border-radius: 8px;
+    pointer-events: none;
+  }
+  
