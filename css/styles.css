@@ -72,12 +72,14 @@ h1 {
     .button-container {
       flex-direction: column;
       align-items: center;
+      padding: 0 16px; /* prevent edge clipping */
     }
   
     .drink-button {
-      width: 80%;
+      width: 100%;
+      max-width: 320px;  /* ✅ Limit width on mobile */
       height: 140px;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 
