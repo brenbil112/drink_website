@@ -40,24 +40,6 @@
     z-index: -1;
   }
 
-
-  .liquor-banner {
-    position: relative;
-    width: 390px;
-    height: 270px;
-    background-image: url("../images/shelves.png");
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #000;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 40px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-
 .liquor-banner::before {
   content: "";
   position: absolute;
@@ -66,20 +48,35 @@
   z-index: 0;
 }
 
+.liquor-banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-image: url("../images/shelves.png");
+  background-repeat: repeat;
+  background-size: auto; /* or set to a specific size like 100px 100px */
+  border-bottom: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .liquor-title {
   position: relative;
   z-index: 1;
   font-size: 2rem;
   color: white;
   font-weight: bold;
-  padding: 10px 20px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 8px;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
   text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
+
 
 @media (max-width: 600px) {
   .liquor-banner {
