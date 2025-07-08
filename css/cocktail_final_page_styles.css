@@ -12,3 +12,36 @@
   text-align: center;
   margin: 10px;
 }
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #ccc;
+    border-top: 8px solid #3399ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px 0;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .result-box {
+    max-width: 500px;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  
+  .result-box h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  

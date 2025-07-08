@@ -44,12 +44,43 @@ Object.entries(drinkRecipes).forEach(([drinkName, recipe]) => {
     }
 });
 
-document.getElementById("spinButton").addEventListener("click", function () {
-  alert("Future feature, coming soon!");
-});
-
 // Handle Reveal Recipes
 document.getElementById("revealButton").addEventListener("click", function () {
   document.getElementById("recipeListContainer").style.display = "block";
 });
   
+document.getElementById("spinButton").addEventListener("click", () => {
+  const recipeList = document.querySelectorAll("#matchingRecipes li");
+
+  if (recipeList.length === 0) {
+    alert("No matching recipes found!");
+    return;
+  }
+
+  const spinButton = document.getElementById("spinButton");
+  const wheel = document.getElementById("wheelAnimation");
+
+  spinButton.style.display = "none";
+  wheel.style.display = "block";
+  wheel.innerHTML = `<div class="spinner"></div>`; // Add animated wheel
+
+  setTimeout(() => {
+    wheel.style.display = "none";
+
+    const randomIndex = Math.floor(Math.random() * recipeList.length);
+    const selected = recipeList[randomIndex];
+    const drinkName = selected.querySelector("a").textContent;
+    const instructions = selected.querySelector("p").textContent;
+
+    // Create and show result box
+    const resultBox = document.createElement("div");
+    resultBox.className = "result-box";
+    resultBox.innerHTML = `
+      <h2>🎉 Your Drink:</h2>
+      <h3>${drinkName}</h3>
+      <p>${instructions}</p>
+    `;
+
+    wheel.replaceWith(resultBox);
+  }, 3000);
+});
