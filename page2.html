@@ -12,6 +12,8 @@
   <p>Choose which ingredients you have</p>
 
   <div class="collapsible-container">
+
+    <!-- Fruit Juices Section -->
     <div class="ingredient-section">
       <button type="button" class="collapsible">Fruit Juices</button>
       <div class="content">
@@ -23,9 +25,37 @@
           <input type="checkbox" name="ingredient" value="Lemon Juice" />
           Lemon juice
         </label>
+        <label class="checkbox-button">
+          <input type="checkbox" name="ingredient" value="Orange Juice" />
+          Orange juice
+        </label>
       </div>
     </div>
 
+    <!-- Liqueurs / Wines Section -->
+    <div class="ingredient-section">
+      <button type="button" class="collapsible">Liqueurs / Wines</button>
+      <div class="content">
+        <label class="checkbox-button">
+          <input type="checkbox" name="ingredient" value="Campari" />
+          Campari
+        </label>
+        <label class="checkbox-button">
+          <input type="checkbox" name="ingredient" value="Triple Sec" />
+          Triple Sec
+        </label>
+        <label class="checkbox-button">
+          <input type="checkbox" name="ingredient" value="Vermouth" />
+          Vermouth
+        </label>
+        <label class="checkbox-button">
+          <input type="checkbox" name="ingredient" value="Port" />
+          Port
+        </label>
+      </div>
+    </div>
+
+    <!-- Soda Section -->
     <div class="ingredient-section">
       <button type="button" class="collapsible">Soda</button>
       <div class="content">
@@ -37,14 +67,21 @@
           <input type="checkbox" name="ingredient" value="Grapefruit Soda" />
           Grapefruit soda
         </label>
+        <label class="checkbox-button">
+          <input type="checkbox" name="ingredient" value="Cola" />
+          Cola
+        </label>
+        <label class="checkbox-button">
+          <input type="checkbox" name="ingredient" value="Sprite" />
+          Sprite
+        </label>
       </div>
     </div>
-  </div>
 
-  <!-- Ungrouped Ingredients -->
-  <div class="collapsible-container">
+    <!-- Miscellaneous / Ungrouped -->
     <div class="ingredient-section">
-      <div class="content" style="display: flex; flex-wrap: wrap; gap: 12px; padding: 10px 16px;">
+      <button type="button" class="collapsible">Other Ingredients</button>
+      <div class="content">
         <label class="checkbox-button">
           <input type="checkbox" name="ingredient" value="Soda Water" />
           Soda water
@@ -62,27 +99,16 @@
           Simple syrup
         </label>
         <label class="checkbox-button">
-          <input type="checkbox" name="ingredient" value="Triple Sec" />
-          Triple sec
-        </label>
-        <label class="checkbox-button">
           <input type="checkbox" name="ingredient" value="Mint" />
           Mint
-        </label>
-        <label class="checkbox-button">
-          <input type="checkbox" name="ingredient" value="Vermouth" />
-          Vermouth
         </label>
         <label class="checkbox-button">
           <input type="checkbox" name="ingredient" value="Grenadine" />
           Grenadine
         </label>
-        <label class="checkbox-button">
-          <input type="checkbox" name="ingredient" value="Campari" />
-          Campari
-        </label>
       </div>
     </div>
+
   </div>
 
   <br />
