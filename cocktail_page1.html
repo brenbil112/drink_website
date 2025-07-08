@@ -5,29 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drink Website</title>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Select Your Liquor</h1>
     <p>Choose which Liquors you have</p>
-    <input type="checkbox" id="bourbon" name="liquor" value="Bourbon">
-    <label for="bouron">bourbon</label><br>
+  <div class="checkbox-flex">
+    <label class="checkbox-button">
+      <input type="checkbox" name="liquor" value="Bourbon" />
+      Bourbon
+    </label>
 
-    <input type="checkbox" id="rye" name="liquor" value="Rye">
-    <label for="rye">rye</label><br>
+    <label class="checkbox-button">
+      <input type="checkbox" name="liquor" value="Rye" />
+      Rye
+    </label>
 
-    <input type="checkbox" id="vodka" name="liquor" value="Vodka">
-    <label for="vodka">vodka</label><br>
+    <label class="checkbox-button">
+      <input type="checkbox" name="liquor" value="Vodka" />
+      Vodka
+    </label>
 
-    <input type="checkbox" id="gin" name="liquor" value="Gin">
-    <label for="gin">gin</label><br>
+    <label class="checkbox-button">
+      <input type="checkbox" name="liquor" value="Gin" />
+      Gin
+    </label>
 
-    <input type="checkbox" id="tequila" name="liquor" value="Tequila">
-    <label for="tequila">tequila</label><br>
+    <label class="checkbox-button">
+      <input type="checkbox" name="liquor" value="Tequila" />
+      Tequila
+    </label>
 
-    <input type="checkbox" id="rum" name="liquor" value="Rum">
-    <label for="rum">rum</label><br>
-    
-    <br>
-    <button id="nextPageBtn">Submit</button>
-    </body>
+    <label class="checkbox-button">
+      <input type="checkbox" name="liquor" value="Rum" />
+      Rum
+    </label>
+  </div>
+
+  <br />
+  <button id="nextPageBtn">Submit</button>
+</body>
 </html>
