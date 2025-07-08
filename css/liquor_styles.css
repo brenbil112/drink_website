@@ -27,14 +27,16 @@
 
   .checkbox-button:has(input:checked) {
     position: relative;
+    z-index: 1;
   }
   
   .checkbox-button:has(input:checked)::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(51, 153, 255, 0.3); /* translucent blue overlay */
-    border-radius: 8px;
+    background: rgba(51, 153, 255, 0.3);
+    border-radius: inherit;  /* makes sure overlay matches rounded button */
     pointer-events: none;
+    z-index: -1;
   }
   
