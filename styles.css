@@ -16,58 +16,68 @@ h1 {
   }
   
   .drink-button {
-    display: inline-block;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 40px 60px;
-    font-size: 28px;
-    background-color: #f0f0f0;
+    font-size: 1.5rem;
+    background-size: cover;
+    background-position: center;
     text-decoration: none;
+    color: white;
+    font-weight: bold;
     border: 2px solid #000;
     border-radius: 10px;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-
-  .drink-button {
-    position: relative;
-    color: white;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
     overflow: hidden;
+    transition: transform 0.2s ease;
+    width: 260px;
+    height: 180px;
   }
   
+  .drink-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Dark overlay for text readability */
   .drink-button::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* darken overlay */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 0;
   }
   
+  /* Text stays on top of overlay */
   .drink-button span {
     position: relative;
     z-index: 1;
   }
-
-  .drink-button:hover {
-    background-color: #ddd;
-    transform: scale(1.05);
-  }
-
-  /* Cocktail Button */
-.cocktail-button {
+  
+  /* Custom backgrounds for each button */
+  .cocktail-button {
     background-image: url("images/cocktails.png");
-    background-size: cover;
-    background-position: center;
-    color: white; /* or whatever contrasts well */
   }
   
-  /* Shot Button */
   .shot-button {
     background-image: url("images/shots.png");
-    background-size: cover;
-    background-position: center;
-    color: white;
   }
   
+  /* Responsive mobile fix */
+  @media (max-width: 600px) {
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .drink-button {
+      width: 80%;
+      height: 140px;
+      font-size: 1.2rem;
+    }
+  }
 
 /* Container to align everything left with padding */
 .page3-container {
