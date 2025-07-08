@@ -61,11 +61,11 @@ h1 {
   }
   
   .cocktail-button {
-    background-image: url("images/cocktails.png");
+    background-image: url("../images/cocktails.png");
   }
   
   .shot-button {
-    background-image: url("images/shots.png");
+    background-image: url("../images/shots.png");
   }
   
   @media (max-width: 600px) {
