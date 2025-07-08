@@ -21,7 +21,7 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 40px 60px;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     background-size: cover;
     background-position: center;
     text-decoration: none;
@@ -50,13 +50,16 @@ h1 {
     z-index: 0;
   }
   
-  /* Text stays on top of overlay */
   .drink-button span {
     position: relative;
     z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(6px);      /* 💡 creates the blur */
+    -webkit-backdrop-filter: blur(6px); /* for Safari */
   }
   
-  /* Custom backgrounds for each button */
   .cocktail-button {
     background-image: url("images/cocktails.png");
   }
@@ -65,7 +68,6 @@ h1 {
     background-image: url("images/shots.png");
   }
   
-  /* Responsive mobile fix */
   @media (max-width: 600px) {
     .button-container {
       flex-direction: column;
