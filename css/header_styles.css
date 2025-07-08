@@ -1,0 +1,49 @@
+.site-header {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+  }
+  
+  .navbar {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .nav-links a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 600px) {
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+  
+    .nav-links a {
+      margin: 4px 0;
+    }
+  }
+  
