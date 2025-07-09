@@ -10,7 +10,7 @@ document.getElementById("nextPageBtn").addEventListener("click", function (e) {
     }
   
     const params = new URLSearchParams();
-    params.set("liquor", selectedLiquors.join(", "));
+    params.set("liquor", selectedLiquors.join(","));
   
     // 🚀 Go to page2.html with the selected liquors
     window.location.href = "page2.html?" + params.toString();
