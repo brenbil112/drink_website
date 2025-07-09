@@ -1,4 +1,16 @@
 const drinkRecipes = {
+  "Boulevardier": {
+    ingredients: ["Bourbon", "Vermouth", "Campari"],
+    instructions: "Stir bourbon, sweet vermouth, and Campari with ice. Strain into a chilled glass and garnish with an orange twist."
+  },
+  "Bourbon Smash": {
+    ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Mint"],
+    instructions: "Muddle mint with lemon juice and simple syrup. Add bourbon and ice, then shake and strain into a glass."
+  },
+  "Brown Derby": {
+    ingredients: ["Bourbon", "Grapefruit Juice", "Honey"],
+    instructions: "Shake bourbon, grapefruit juice, and honey syrup with ice. Strain into a chilled glass."
+  },
   "Daiquiri": {
     ingredients: ["Rum", "Lime Juice", "Simple Syrup"],
     instructions: "Shake rum, lime juice, and simple syrup with ice. Strain into a chilled glass."
@@ -10,6 +22,10 @@ const drinkRecipes = {
   "Gin Fizz": {
     ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water"],
     instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass and top with soda water."
+  },
+  "Kentucky Mule": {
+    ingredients: ["Bourbon", "Ginger Beer", "Lime Juice"],
+    instructions: "Pour bourbon and lime juice over ice. Top with ginger beer and garnish with a lime wedge."
   },
   "Manhattan": {
     ingredients: ["Rye", "Vermouth", "Bitters"],
@@ -35,6 +51,10 @@ const drinkRecipes = {
     ingredients: ["Vodka", "Vermouth"],
     instructions: "Stir or shake gin and vermouth with ice. Strain into a martini glass and garnish with an olive or twist."
   },
+  "Milk Punch": {
+    ingredients: ["Bourbon", "Milk", "Simple Syrup"],
+    instructions: "Shake bourbon, milk, and simple syrup with ice. Strain into a glass and garnish with grated nutmeg."
+  },
   "Mint Julip": {
     ingredients: ["Bourbon", "Mint", "Simple Syrup"],
     instructions: "Muddle mint with simple syrup, add crushed ice and bourbon, then stir until chilled."
@@ -47,6 +67,10 @@ const drinkRecipes = {
     ingredients: ["Gin", "Vermouth", "Campari"],
     instructions: "Stir gin, sweet vermouth, and Campari with ice. Strain into a rocks glass and garnish with orange peel."
   },
+  "New York Sour": {
+    ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Red Wine"],
+    instructions: "Shake bourbon, lemon juice, and simple syrup with ice. Strain into a glass and float red wine on top."
+  },
   "Old Fashioned": {
     ingredients: ["Bourbon", "Simple Syrup", "Bitters"],
     instructions: "Muddle sugar with bitters, add bourbon and ice, and stir. Garnish with orange peel."
@@ -58,6 +82,10 @@ const drinkRecipes = {
   "Rum and Coke": {
     ingredients: ["Rum", "Cola"],
     instructions: "Fill a glass with ice, pour in rum, and top with cola. Stir gently and garnish with a lime wedge."
+  },
+  "Sazerac": {
+    ingredients: ["Rye", "Simple Syrup", "Bitters", "Absinthe"],
+    instructions: "Muddle sugar with bitters, add rye and ice, stir, then rinse a chilled glass with absinthe and strain the drink into it."
   },
   "Screwdriver": {
     ingredients: ["Vodka", "Orange Juice"],
@@ -75,6 +103,10 @@ const drinkRecipes = {
     ingredients: ["Vodka", "Soda Water"],
     instructions: "Fill a glass with ice, pour in 2 oz of vodka, and top with soda water. Garnish with lime."
   },
+  "Ward Eight": {
+    ingredients: ["Rye", "Lemon Juice", "Orange Juice", "Grenadine"],
+    instructions: "Shake rye, lemon juice, orange juice, and grenadine with ice. Strain into a chilled glass."
+  },
   "Whiskey Sour (Bourbon)": {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup"],
     instructions: "Shake bourbon, lemon juice, and simple syrup with ice. Strain and serve with lemon twist."
@@ -82,7 +114,7 @@ const drinkRecipes = {
   "Whiskey Sour (Rye)": {
     ingredients: ["Rye", "Lemon Juice", "Simple Syrup"],
     instructions: "Shake rye, lemon juice, and simple syrup with ice. Strain into a glass and garnish with a cherry."
-  }
+  }, 
 };
  
 
