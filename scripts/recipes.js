@@ -51,16 +51,12 @@ const drinkRecipes = {
     ingredients: ["Bourbon", "Ginger Beer", "Lime Juice"],
     instructions: "Pour bourbon and lime juice over ice. Top with ginger beer and garnish with a lime wedge."
   },
-  "Manhattan": {
-    ingredients: ["Rye", "Vermouth", "Bitters"],
-    instructions: "Stir rye, vermouth, and bitters with ice. Strain into a cocktail glass and garnish with a cherry."
-  },
   "Manhattan (Bourbon)": {
-    ingredients: ["Bourbon", "Sweet Vermouth", "Bitters"],
+    ingredients: ["Bourbon", "Vermouth", "Bitters"],
     instructions: "Stir bourbon, sweet vermouth, and bitters with ice. Strain into a chilled glass and garnish with a cherry."
   },
   "Manhattan (Rye)": {
-    ingredients: ["Rye", "Sweet Vermouth", "Bitters"],
+    ingredients: ["Rye", "Vermouth", "Bitters"],
     instructions: "Stir rye, sweet vermouth, and bitters with ice. Strain into a chilled glass and garnish with a cherry."
   },
   "Margarita": {
