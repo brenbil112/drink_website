@@ -43,6 +43,10 @@ const drinkRecipes = {
     ingredients: ["Bourbon", "Grapefruit Juice", "Honey Syrup"],
     instructions: "Shake bourbon, grapefruit juice, and honey syrup with ice. Strain into a chilled glass."
   },
+  "Caipirinha": {
+    ingredients: ["Cachaça", "Lime", "Sugar"],
+    instructions: "Muddle lime wedges with sugar, add cachaça and ice, then stir well."
+  },
   "Daiquiri": {
     ingredients: ["Rum", "Lime Juice", "Simple Syrup"],
     instructions: "Shake rum, lime juice, and simple syrup with ice. Strain into a chilled glass."
@@ -54,6 +58,10 @@ const drinkRecipes = {
   "Espresso Martini": {
     ingredients: ["Vodka", "Espresso", "Coffee Liqueur"],
     instructions: "Shake vodka, espresso, and coffee liqueur with ice. Strain into a chilled martini glass."
+  },
+  "Fernadito": {
+    ingredients: ["Fernet", "Cola"],
+    instructions: "Pour fernet over ice and top with cola. Stir gently and garnish with a lime wedge."
   },
   "French 75": {
     ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Champagne"],
