@@ -75,6 +75,18 @@ const drinkRecipes = {
     ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Champagne"],
     instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass and top with champagne."
   },
+  "French Connection": {
+    ingredients: ["Cognac", "Amaretto"],
+    instructions: "Pour cognac and amaretto over ice in a glass. Stir gently and serve."
+  },
+  "Gimlet": {
+    ingredients: ["Gin", "Lime Juice", "Simple Syrup"],
+    instructions: "Shake gin, lime juice, and simple syrup with ice. Strain into a chilled glass."
+  },
+  "Gin Buck": {
+    ingredients: ["Gin", "Ginger Ale", "Lime Juice"],
+    instructions: "Pour gin and lime juice over ice, top with ginger ale, and stir gently. Garnish with a lime wedge."
+  },
   "Gin and Tonic": {
     ingredients: ["Gin", "Tonic Water"],
     instructions: "Pour 2 oz of gin over ice and top with tonic water. Garnish with a lime wedge."
@@ -86,6 +98,10 @@ const drinkRecipes = {
   "Gold Rush": {
     ingredients: ["Bourbon", "Lemon Juice", "Honey Syrup"],
     instructions: "Shake bourbon, lemon juice, and honey syrup with ice. Strain into a chilled glass."
+  },
+  "Hurricane": {
+    ingredients: ["Rum", "Lemon Juice", "Passion Fruit Juice", "Simple Syrup"],
+    instructions: "Shake rum, lemon juice, passion fruit juice, and simple syrup with ice. Strain into a glass filled with ice."
   },
   "Kentucky Mule": {
     ingredients: ["Bourbon", "Ginger Beer", "Lime Juice"],
