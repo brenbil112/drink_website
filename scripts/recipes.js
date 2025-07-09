@@ -47,6 +47,14 @@ const drinkRecipes = {
     ingredients: ["Cachaça", "Lime", "Sugar"],
     instructions: "Muddle lime wedges with sugar, add cachaça and ice, then stir well."
   },
+  "Caipiroska": {
+    ingredients: ["Vodka", "Lime", "Sugar"],
+    instructions: "Muddle lime wedges with sugar, add vodka and ice, then stir well."
+  },
+  "Cosmopolitan": {
+    ingredients: ["Vodka", "Triple Sec", "Lime Juice", "Cranberry Juice"],
+    instructions: "Shake vodka, triple sec, lime juice, and cranberry juice with ice. Strain into a chilled martini glass."
+  },
   "Daiquiri": {
     ingredients: ["Rum", "Lime Juice", "Simple Syrup"],
     instructions: "Shake rum, lime juice, and simple syrup with ice. Strain into a chilled glass."
