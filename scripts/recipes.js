@@ -103,13 +103,21 @@ const drinkRecipes = {
     ingredients: ["Rum", "Lemon Juice", "Passion Fruit Juice", "Simple Syrup"],
     instructions: "Shake rum, lemon juice, passion fruit juice, and simple syrup with ice. Strain into a glass filled with ice."
   },
+  "John Collins": {
+    ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water"],
+    instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass filled with ice and top with soda water."
+  },
   "Kentucky Mule": {
     ingredients: ["Bourbon", "Ginger Beer", "Lime Juice"],
     instructions: "Pour bourbon and lime juice over ice. Top with ginger beer and garnish with a lime wedge."
   },
+  "Long Island Iced Tea": {
+    ingredients: ["Vodka", "Gin", "Rum", "Tequila", "Triple Sec", "Lemon Juice", "Cola"],
+    instructions: ["Combine Vodka, Gin, Rum, Tequila, Triple Sec, and Lemon Juice in a shaker with ice.", "Shake well and strain into a tall glass filled with ice.", "Top with Cola and garnish with a lemon wedge."]
+  },
   "Manhattan (Bourbon)": {
-    ingredients: ["Bourbon", "Vermouth", "Bitters"],
-    instructions: "Stir bourbon, sweet vermouth, and bitters with ice. Strain into a chilled glass and garnish with a cherry."
+  ingredients: ["Bourbon", "Vermouth", "Bitters"],
+  instructions: "Stir bourbon, sweet vermouth, and bitters with ice. Strain into a chilled glass and garnish with a cherry."
   },
   "Manhattan (Rye)": {
     ingredients: ["Rye", "Vermouth", "Bitters"],
