@@ -1,4 +1,16 @@
 const drinkRecipes = {
+  "Aperol Spritz": {
+    ingredients: ["Aperol", "Prosecco", "Soda Water"],
+    instructions: "Pour Aperol and Prosecco over ice in a glass, top with soda water, and garnish with an orange slice."
+  },
+  "Americano": {
+    ingredients: ["Campari", "Vermouth", "Soda Water"],
+    instructions: "Pour Campari and sweet vermouth over ice, top with soda water, and garnish with an orange slice."
+  },
+  "Bloody Mary": {
+    ingredients: ["Vodka", "Tomato Juice", "Lemon Juice"],
+    instructions: "Shake vodka, tomato juice, lemon juice, with optional hot sauce, celery salt, and pepper with ice. Strain into a glass and garnish with a celery stick and lemon wedge."
+  },
   "Boulevardier": {
     ingredients: ["Bourbon", "Vermouth", "Campari"],
     instructions: "Stir bourbon, sweet vermouth, and Campari with ice. Strain into a chilled glass and garnish with an orange twist."
@@ -34,6 +46,18 @@ const drinkRecipes = {
   "Daiquiri": {
     ingredients: ["Rum", "Lime Juice", "Simple Syrup"],
     instructions: "Shake rum, lime juice, and simple syrup with ice. Strain into a chilled glass."
+  },
+  "Dark and Stormy": {
+    ingredients: ["Rum", "Ginger Beer", "Lime Juice"],
+    instructions: "Pour rum over ice, add lime juice, and top with ginger beer. Stir gently and garnish with a lime wedge."
+  },
+  "Espresso Martini": {
+    ingredients: ["Vodka", "Espresso", "Coffee Liqueur"],
+    instructions: "Shake vodka, espresso, and coffee liqueur with ice. Strain into a chilled martini glass."
+  },
+  "French 75": {
+    ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Champagne"],
+    instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass and top with champagne."
   },
   "Gin and Tonic": {
     ingredients: ["Gin", "Tonic Water"],
