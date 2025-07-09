@@ -58,14 +58,19 @@ document.getElementById("spinButton").addEventListener("click", () => {
   }
 
   const spinButton = document.getElementById("spinButton");
-  const wheel = document.getElementById("wheelAnimation");
+  const wheelContainer = document.getElementById("wheelAnimation");
 
   spinButton.style.display = "none";
-  wheel.style.display = "block";
-  wheel.innerHTML = `<div class="spinner"></div>`; // Add animated wheel
+  wheelContainer.style.display = "flex";
+
+  // Reset animation by forcing reflow
+  const wheel = document.getElementById("rouletteWheel");
+  wheel.classList.remove("roulette-wheel");
+  void wheel.offsetWidth; // trigger reflow
+  wheel.classList.add("roulette-wheel");
 
   setTimeout(() => {
-    wheel.style.display = "none";
+    wheelContainer.style.display = "none";
 
     const randomIndex = Math.floor(Math.random() * recipeList.length);
     const selected = recipeList[randomIndex];
@@ -81,6 +86,6 @@ document.getElementById("spinButton").addEventListener("click", () => {
       <p>${instructions}</p>
     `;
 
-    wheel.replaceWith(resultBox);
+    wheelContainer.replaceWith(resultBox);
   }, 3000);
 });
