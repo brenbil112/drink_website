@@ -67,10 +67,6 @@ const drinkRecipes = {
     ingredients: ["Bourbon", "Lemonade"],
     instructions: "Pour bourbon over ice and top with lemonade. Stir gently and garnish with a lemon slice."
   },
-  "Bourbon Smash": {
-    ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Mint"],
-    instructions: "Muddle mint with lemon juice and simple syrup. Add bourbon and ice, then shake and strain into a glass."
-  },
   "Bourbon Tea Julep": {
     ingredients: ["Bourbon", "Sweet Tea", "Mint"],
     instructions: "Muddle mint with sweet tea, add bourbon and ice, then stir until chilled. Garnish with a mint sprig."
@@ -244,6 +240,10 @@ const drinkRecipes = {
     ingredients: ["Rum", "Lemon Juice", "Passion Fruit Juice", "Simple Syrup"],
     instructions: "Shake rum, lemon juice, passion fruit juice, and simple syrup with ice. Strain into a glass filled with ice."
   },
+  "In Cold Blood": {
+    ingredients: ["Rye", "Sweet Vermouth", "Campari", "Orange Bitters"],
+    instructions: "Stir rye, sweet vermouth, Campari, and orange bitters with ice. Strain into a chilled glass and garnish with an orange twist." 
+  },
   /*"Irish Coffee": {
     ingredients: ["Irish Whiskey", "Hot Coffee", "Sugar", "Cream"],
     instructions: "Mix hot coffee with sugar and Irish whiskey. Top with lightly whipped cream."
@@ -351,6 +351,18 @@ const drinkRecipes = {
   "New York Sour": {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Red Wine"],
     instructions: "Shake bourbon, lemon juice, and simple syrup with ice. Strain into a glass and float red wine on top."
+  },
+  "Nor'easter": {
+    ingredients: ["Bourbon", "Lime Juice", "Ginger Beer", "Maple Syrup"],
+    instructions: "Shake bourbon, lime juice, and maple syrup with ice. Strain into a glass filled with ice and top with ginger beer."
+  },
+  "Northern Lights": {
+    ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Blue Curacao"],
+    instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a chilled glass and float blue curacao on top."
+  },
+  "Old Cuban": {
+    ingredients: ["Rum", "Champagne", "Mint", "Lime Juice", "Simple Syrup"],
+    instructions: "Muddle mint with lime juice and simple syrup. Add rum and ice, shake, then strain into a glass and top with champagne."
   },
   "Old Fashioned": {
     ingredients: ["Bourbon", "Simple Syrup", "Bitters"],
@@ -487,6 +499,22 @@ const drinkRecipes = {
   "Ward Eight": {
     ingredients: ["Rye", "Lemon Juice", "Orange Juice", "Grenadine"],
     instructions: "Shake rye, lemon juice, orange juice, and grenadine with ice. Strain into a chilled glass."
+  },
+  "Whiskey Chai": {
+    ingredients: ["Bourbon", "Chai Tea", "Honey Syrup"],
+    instructions: "Mix brewed chai tea with bourbon and honey syrup. Serve warm or over ice."
+  },
+  "Whiskey Samash": {
+    ingredients: ["Bourbon", "Lemon Juice", "Fig Syrup", "Mint"],
+    instructions: "Combine bourbon, lemon juice, and fig syrup in a cocktail shaker filled with ice. Place lid on shaker; shake briefly, about 10 seconds. Double-strain into a rocks glass; top with crushed ice. Garnish with mint."
+  },
+  "Whiskey Smash (Bourbon)": {
+    ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Mint"],
+    instructions: "Muddle mint with lemon juice and simple syrup. Add bourbon and ice, then shake and strain into a glass."
+  },
+  "Whiskey Smash (Rye)": {
+    ingredients: ["Rye", "Lemon Juice", "Simple Syrup", "Mint"],
+    instructions: "Muddle mint with lemon juice and simple syrup. Add rye and ice, then shake and strain into a glass."
   },
   "Whiskey Sour (Bourbon)": {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup"],
