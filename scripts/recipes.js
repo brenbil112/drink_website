@@ -107,6 +107,10 @@ const drinkRecipes = {
     ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water"],
     instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass filled with ice and top with soda water."
   },
+  "Last Word": {
+    ingredients: ["Gin", "Green Chartreuse", "Maraschino Liqueur", "Lime Juice"],
+    instructions: "Shake all ingredients with ice. Strain into a chilled glass."
+  },
   "Kentucky Mule": {
     ingredients: ["Bourbon", "Ginger Beer", "Lime Juice"],
     instructions: "Pour bourbon and lime juice over ice. Top with ginger beer and garnish with a lime wedge."
@@ -215,6 +219,10 @@ const drinkRecipes = {
     ingredients: ["Gin", "Vodka", "Lillet Blanc"],
     insturctions: "Shake gin, vodka, and Lillet Blanc with ice. Strain into a chilled martini glass and garnish with a lemon twist."
   },
+  "Vieux Carré": {
+    ingredients: ["Rye", "Cognac", "Vermouth", "Benedictine", "Bitters"],
+    instructions: "Stir all ingredients with ice. Strain into a chilled glass and garnish with a lemon twist."
+  },
   "Vodka Soda": {
     ingredients: ["Vodka", "Soda Water"],
     instructions: "Fill a glass with ice, pour in 2 oz of vodka, and top with soda water. Garnish with lime."
@@ -234,6 +242,10 @@ const drinkRecipes = {
   "White Russian": {
     ingredients: ["Vodka", "Coffee Liqueur", "Cream"],
     instructions: "Pour vodka and coffee liqueur over ice, top with cream, and stir gently."
+  },
+  "Yellow Bird": {
+    ingredients: ["Rum", "Lime Juice", "Orange Liqueur", "Galliano"],
+    instructions: "Shake all ingredients with ice. Strain into a chilled glass and garnish with an orange slice."
   },
   "Zombie": {
     ingredients: ["Rum", "Lime Juice", "Brandy", "Grenadine", "Pineapple Juice"],
