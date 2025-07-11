@@ -23,6 +23,14 @@ const drinkRecipes = {
     ingredients: ["Gin", "Lemon Juice", "Honey Syrup"],
     instructions: "Shake gin, lemon juice, and honey syrup with ice. Strain into a chilled glass."
   },
+  /*"Bellini": {
+    ingredients: ["Prosecco", "Peach Purée"],
+    instructions: "Pour peach purée into a glass and top with Prosecco. Stir gently."
+  },*/
+  "Blackberry Bramble": {
+    ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Blackberry Liqueur"],
+    instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass filled with crushed ice and drizzle blackberry liqueur on top."
+  },
   "Bloody Mary": {
     ingredients: ["Vodka", "Tomato Juice", "Lemon Juice"],
     instructions: "Shake vodka, tomato juice, lemon juice, with optional hot sauce, celery salt, and pepper with ice. Strain into a glass and garnish with a celery stick and lemon wedge."
@@ -399,6 +407,18 @@ const drinkRecipes = {
   "Singapore Sling": {
     ingredients: ["Gin", "Cherry Liqueur", "Benedictine", "Grenadine", "Pineapple Juice", "Lime Juice"],
     instructions: "Shake all ingredients with ice. Strain into a glass filled with ice and garnish with a cherry and pineapple slice."
+  },
+  "Summer Whiskey Sour": {
+    ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Mint"],
+    instructions: "Muddle mint with lemon juice and simple syrup. Add bourbon and ice, then shake and strain into a glass."
+  },
+  "Tequila and Tonic": {
+    ingredients: ["Tequila", "Tonic Water"],
+    instructions: "Pour tequila over ice and top with tonic water. Stir gently and garnish with a lime wedge."
+  },
+  "Tequila Mule": {
+    ingredients: ["Tequila", "Ginger Beer", "Lime Juice"],
+    instructions: "Pour tequila and lime juice over ice. Top with ginger beer and garnish with a lime wedge."
   },
   "Tequila Sunrise": {
     ingredients: ["Tequila", "Orange Juice", "Grenadine"],
