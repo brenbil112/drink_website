@@ -71,6 +71,30 @@ const drinkRecipes = {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Mint"],
     instructions: "Muddle mint with lemon juice and simple syrup. Add bourbon and ice, then shake and strain into a glass."
   },
+  "Bourbon Tea Julep": {
+    ingredients: ["Bourbon", "Sweet Tea", "Mint"],
+    instructions: "Muddle mint with sweet tea, add bourbon and ice, then stir until chilled. Garnish with a mint sprig."
+  },
+  "Brandy Alexander": {
+    ingredients: ["Brandy", "Crème de Cacao", "Cream"],
+    instructions: "Shake brandy, crème de cacao, and cream with ice. Strain into a chilled glass and garnish with grated nutmeg."
+  },
+  "Brandy Sour": {
+    ingredients: ["Brandy", "Lemon Juice", "Simple Syrup"],
+    instructions: "Shake brandy, lemon juice, and simple syrup with ice. Strain into a chilled glass."
+  },
+  "Brandy and Ginger": {
+    ingredients: ["Brandy", "Ginger Ale"],
+    instructions: "Pour brandy over ice and top with ginger ale. Stir gently and garnish with a lime wedge."
+  },
+  "Brandy Highball": {
+    ingredients: ["Brandy", "Soda Water"],
+    instructions: "Pour brandy over ice and top with soda water. Stir gently and garnish with a lemon twist."
+  },
+  "Brandy and Tonic": {
+    ingredients: ["Brandy", "Tonic Water"],
+    instructions: "Pour brandy over ice and top with tonic water. Stir gently and garnish with a lime wedge."
+  },
   "Brown Derby": {
     ingredients: ["Bourbon", "Grapefruit Juice", "Honey Syrup"],
     instructions: "Shake bourbon, grapefruit juice, and honey syrup with ice. Strain into a chilled glass."
@@ -123,6 +147,10 @@ const drinkRecipes = {
   "Dark and Stormy": {
     ingredients: ["Rum", "Ginger Beer", "Lime Juice"],
     instructions: "Pour rum over ice, add lime juice, and top with ginger beer. Stir gently and garnish with a lime wedge."
+  },
+  "Dog Days of Summer": {
+    ingredients: ["Bourbon", "Sweet Vermouth", "Lemon Juice", "Beer (Summer Ale)"],
+    instructions: "Shake bourbon, sweet vermouth, and lemon juice with ice. Strain into a glass filled with ice and top with summer ale."
   },
   "Espresso Martini": {
     ingredients: ["Vodka", "Espresso", "Coffee Liqueur"],
@@ -255,6 +283,14 @@ const drinkRecipes = {
   "Manhattan (Rye)": {
     ingredients: ["Rye", "Vermouth", "Bitters"],
     instructions: "Stir rye, sweet vermouth, and bitters with ice. Strain into a chilled glass and garnish with a cherry."
+  },
+  "Maple Bourbon Smash": {
+    ingredients: ["Bourbon", "Lemon Juice", "Maple Syrup", "Mint"],
+    instructions: "Muddle mint with lemon juice and maple syrup. Add bourbon and ice, then shake and strain into a glass."
+  },
+  "Maple Old Fashioned": {
+    ingredients: ["Bourbon", "Maple Syrup", "Bitters"],
+    instructions: "Muddle sugar with bitters, add bourbon and maple syrup, then stir with ice. Garnish with an orange twist."
   },
   "Margarita": {
     ingredients: ["Tequila", "Lime Juice", "Triple Sec"],
@@ -395,6 +431,14 @@ const drinkRecipes = {
   "Sea Breeze": {
     ingredients: ["Vodka", "Cranberry Juice", "Grapefruit Juice"],
     instructions: "Pour vodka over ice, add cranberry juice and grapefruit juice. Stir gently and garnish with a lime wedge."
+  },
+  "Shadow Woman (Gin)": {
+    ingredients: ["Gin", "Lemon Juice", "Blackberry Syrup"],
+    instructions: "Shake gin, lemon juice, and blackberry syrup with ice. Strain into a chilled glass and garnish with a blackberry."
+  },
+  "Shadow Woman (Bourbon)": {
+    ingredients: ["Bourbon", "Lemon Juice", "Blackberry Syrup"],
+    instructions: "Shake bourbon, lemon juice, and blackberry syrup with ice. Strain into a chilled glass and garnish with a blackberry."
   },
   "Sherry Cobble": {
     ingredients: ["Sherry", "Simple Syrup", "Bitters"],
