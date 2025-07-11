@@ -3,6 +3,10 @@ const drinkRecipes = {
     ingredients: ["Sweet Vermouth", "Dry Vermouth", "Orange Bitters"],
     instructions: "Stir sweet vermouth, dry vermouth, and orange bitters with ice. Strain into a chilled glass and garnish with an orange twist."
   },*/
+  "Agavoni": {
+    ingredients: ["Tequila", "Sweet Vermouth", "Campari"],
+    instructions: "Stir tequila, sweet vermouth, and Campari with ice. Strain into a chilled glass and garnish with an orange twist."
+  },
   "Aperol Spritz": {
     ingredients: ["Aperol", "Prosecco", "Soda Water"],
     instructions: "Pour Aperol and Prosecco over ice in a glass, top with soda water, and garnish with an orange slice."
@@ -55,7 +59,7 @@ const drinkRecipes = {
     ingredients: ["Bourbon", "Lemonade"],
     instructions: "Pour bourbon over ice and top with lemonade. Stir gently and garnish with a lemon slice."
   },
-    "Bourbon Smash": {
+  "Bourbon Smash": {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Mint"],
     instructions: "Muddle mint with lemon juice and simple syrup. Add bourbon and ice, then shake and strain into a glass."
   },
@@ -172,6 +176,34 @@ const drinkRecipes = {
     ingredients: ["Gin", "Sweet Vermouth", "Fernet"],
     instructions: "Stir gin, sweet vermouth, and fernet with ice. Strain into a chilled glass and garnish with an orange twist."
   },
+  "Hibiscus Daiquiri": {
+    ingredients: ["Rum", "Hibiscus Syrup", "Lime Juice"],
+    instructions: "Shake rum, hibiscus syrup, and lime juice with ice. Strain into a chilled glass."
+  },
+  "Hibiscus Margarita": {
+    ingredients: ["Tequila", "Hibiscus Syrup", "Lime Juice"],
+    instructions: "Shake tequila, hibiscus syrup, and lime juice with ice. Strain into a salt-rimmed glass and garnish with a lime wedge."
+  },
+  "Hibiscus Mojito": {
+    ingredients: ["Rum", "Hibiscus Syrup", "Lime Juice", "Mint", "Soda Water"],
+    instructions: "Muddle mint with lime juice and hibiscus syrup. Add rum and ice, top with soda water, and stir."
+  },
+  "Hibiscus Sour": {
+    ingredients: ["Gin", "Hibiscus Syrup", "Lemon Juice", "Egg White"],
+    instructions: "Shake gin, hibiscus syrup, lemon juice, and egg white without ice to emulsify. Add ice and shake again. Strain into a chilled glass."
+  },
+  "Hibiscus Tonic": {
+    ingredients: ["Gin", "Hibiscus Syrup", "Tonic Water"],
+    instructions: "Pour gin and hibiscus syrup over ice, top with tonic water, and stir gently. Garnish with a lime wedge."
+  },
+  "Hibiscus Vodka Collins": {
+    ingredients: ["Vodka", "Hibiscus Syrup", "Lemon Juice", "Soda Water"],
+    instructions: "Shake vodka, hibiscus syrup, and lemon juice with ice. Strain into a glass filled with ice and top with soda water."
+  },
+  "Hot Toddy": {
+    ingredients: ["Bourbon", "Honey", "Lemon Juice"],
+    instructions: "Mix bourbon, honey, and lemon juice in a glass. Top with hot water and stir until honey is dissolved."
+  },
   "Hurricane": {
     ingredients: ["Rum", "Lemon Juice", "Passion Fruit Juice", "Simple Syrup"],
     instructions: "Shake rum, lemon juice, passion fruit juice, and simple syrup with ice. Strain into a glass filled with ice."
@@ -203,6 +235,10 @@ const drinkRecipes = {
   "Long Island Iced Tea": {
     ingredients: ["Vodka", "Gin", "Rum", "Tequila", "Triple Sec", "Lemon Juice", "Cola"],
     instructions: ["Combine Vodka, Gin, Rum, Tequila, Triple Sec, and Lemon Juice in a shaker with ice.", "Shake well and strain into a tall glass filled with ice.", "Top with Cola and garnish with a lemon wedge."]
+  },
+  "Mai Tai": {
+    ingredients: ["Rum", "Lime Juice", "Orange Liqueur", "Orgeat Syrup"],
+    instructions: "Shake rum, lime juice, orange liqueur, and orgeat syrup with ice. Strain into a glass filled with crushed ice and garnish with mint and a lime wheel."
   },
   "Manhattan (Bourbon)": {
   ingredients: ["Bourbon", "Vermouth", "Bitters"],
@@ -252,17 +288,21 @@ const drinkRecipes = {
     ingredients: ["Vodka", "Ginger Beer", "Lime Juice"],
     instructions: "Pour vodka and lime juice over ice in a copper mug. Top with ginger beer and garnish with a lime wedge."
   },
-  "Negroni Sbagliato": {
-    ingredients: ["Prosecco", "Campari", "Sweet Vermouth"],
-    instructions: "Pour Prosecco, Campari, and sweet vermouth over ice in a glass. Stir gently and garnish with an orange slice."
+  "Nectar": {
+    ingredients: ["Gin", "Lemon Juice", "Honey Syrup"],
+    instructions: "Shake gin, lemon juice, and honey syrup with ice. Strain into a chilled glass."
+  },
+  "Negroni": {
+    ingredients: ["Gin", "Vermouth", "Campari"],
+    instructions: "Stir gin, sweet vermouth, and Campari with ice. Strain into a rocks glass and garnish with orange peel."
   },
   "Negroni Bianco": {
     ingredients: ["Gin", "Dry Vermouth", "Aperol"],
     instructions: "Stir gin, dry vermouth, and Aperol with ice. Strain into a chilled glass and garnish with a lemon twist."
   },
-  "Negroni": {
-    ingredients: ["Gin", "Vermouth", "Campari"],
-    instructions: "Stir gin, sweet vermouth, and Campari with ice. Strain into a rocks glass and garnish with orange peel."
+  "Negroni Sbagliato": {
+    ingredients: ["Prosecco", "Campari", "Sweet Vermouth"],
+    instructions: "Pour Prosecco, Campari, and sweet vermouth over ice in a glass. Stir gently and garnish with an orange slice."
   },
   "New York Sour": {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Red Wine"],
@@ -276,9 +316,33 @@ const drinkRecipes = {
     ingredients: ["Tequila", "Grapefruit Soda", "Lime Juice"],
     instructions: "Pour tequila and lime juice over ice. Top with grapefruit soda and stir. Garnish with a lime wedge."
   },
+  /*"Paper Plane": {
+    ingredients: ["Bourbon", "Aperol", "Amaro Nonino", "Lemon Juice"],
+    instructions: "Shake all ingredients with ice. Strain into a chilled glass."
+  },*/
+  "Part-Time Lover": {
+    ingredients: ["Vodka", "Lemon Juice", "Simple Syrup", "Ginger Beer"],
+    instructions: "Shake vodka, lemon juice, and simple syrup with ice. Strain into a glass filled with ice and top with ginger beer."
+  },
+  /*"Pimm's Cup": {
+    ingredients: ["Pimm's No. 1", "Lemonade", "Cucumber", "Mint", "Fruit"],
+    instructions: "Mix Pimm's No. 1 with lemonade in a glass filled with ice. Garnish with cucumber slices, mint leaves, and assorted fruits."
+  },*/
+  "Pisco and Tonic": {
+    ingredients: ["Pisco", "Tonic Water", "Lime Juice"],
+    instructions: "Pour pisco over ice, add lime juice, and top with tonic water. Stir gently and garnish with a lime wedge."
+  },
+  "Pisco Punch": {
+    ingredients: ["Pisco", "Pineapple Juice", "Lemon Juice", "Simple Syrup"],
+    instructions: "Shake pisco, pineapple juice, lemon juice, and simple syrup with ice. Strain into a glass filled with ice and garnish with a pineapple slice."
+  },
   "Pisco Sour": {
     ingredients: ["Pisco", "Lemon Juice", "Simple Syrup", "Egg White"],
     instructions: "Shake pisco, lemon juice, simple syrup, and egg white without ice to emulsify. Add ice and shake again. Strain into a chilled glass."
+  },
+  "Planter's Punch": {
+    ingredients: ["Rum", "Lime Juice", "Orange Juice", "Grenadine", "Simple Syrup"],  
+    instructions: "Shake rum, lime juice, orange juice, grenadine, and simple syrup with ice. Strain into a glass filled with ice and garnish with an orange slice."
   },
   "Queens Park Swizzle": {
     ingredients: ["Rum", "Lime Juice", "Simple Syrup", "Mint", "Bitters"],
