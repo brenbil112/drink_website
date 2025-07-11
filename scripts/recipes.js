@@ -143,7 +143,11 @@ const drinkRecipes = {
     ingredients: ["Bourbon", "Vermouth", "Orange Liqueur", "Simple Syrup", "Bitters"],
     instructions: "Shake all ingredients with ice. Strain into a chilled glass and garnish with an orange twist."
   },
-  "Mint Julip": {
+  "Mimosa": {
+    ingredients: ["Champagne", "Orange Juice"],
+    instructions: "Pour equal parts champagne and orange juice into a glass. Stir gently and serve."
+  },
+  "Mint Julep": {
     ingredients: ["Bourbon", "Mint", "Simple Syrup"],
     instructions: "Muddle mint with simple syrup, add crushed ice and bourbon, then stir until chilled."
   },
@@ -167,6 +171,10 @@ const drinkRecipes = {
     ingredients: ["Tequila", "Grapefruit Soda", "Lime Juice"],
     instructions: "Pour tequila and lime juice over ice. Top with grapefruit soda and stir. Garnish with a lime wedge."
   },
+  "Pisco Sour": {
+    ingredients: ["Pisco", "Lemon Juice", "Simple Syrup", "Egg White"],
+    instructions: "Shake pisco, lemon juice, simple syrup, and egg white without ice to emulsify. Add ice and shake again. Strain into a chilled glass."
+  },
   "Rum and Coke": {
     ingredients: ["Rum", "Cola"],
     instructions: "Fill a glass with ice, pour in rum, and top with cola. Stir gently and garnish with a lime wedge."
@@ -187,6 +195,14 @@ const drinkRecipes = {
     ingredients: ["Vodka", "Orange Juice"],
     instructions: "Pour vodka over ice and top with orange juice. Stir gently and garnish with an orange slice."
   },
+  "Sea Breeze": {
+    ingredients: ["Vodka", "Cranberry Juice", "Grapefruit Juice"],
+    instructions: "Pour vodka over ice, add cranberry juice and grapefruit juice. Stir gently and garnish with a lime wedge."
+  },
+  "Sidecar": {
+    ingredients: ["Cognac", "Triple Sec", "Lemon Juice"],
+    instructions: "Shake cognac, triple sec, and lemon juice with ice. Strain into a chilled glass, optionally rimmed with sugar."
+  },
   "Tequila Sunrise": {
     ingredients: ["Tequila", "Orange Juice", "Grenadine"],
     instructions: "Pour tequila and orange juice over ice. Slowly add grenadine to create a sunrise effect."
@@ -194,6 +210,10 @@ const drinkRecipes = {
   "Tom Collins": {
     ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water"],
     instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass filled with ice and top with soda water."
+  },
+  "Vesper Martini": {
+    ingredients: ["Gin", "Vodka", "Lillet Blanc"],
+    insturctions: "Shake gin, vodka, and Lillet Blanc with ice. Strain into a chilled martini glass and garnish with a lemon twist."
   },
   "Vodka Soda": {
     ingredients: ["Vodka", "Soda Water"],
@@ -211,6 +231,14 @@ const drinkRecipes = {
     ingredients: ["Rye", "Lemon Juice", "Simple Syrup"],
     instructions: "Shake rye, lemon juice, and simple syrup with ice. Strain into a glass and garnish with a cherry."
   }, 
+  "White Russian": {
+    ingredients: ["Vodka", "Coffee Liqueur", "Cream"],
+    instructions: "Pour vodka and coffee liqueur over ice, top with cream, and stir gently."
+  },
+  "Zombie": {
+    ingredients: ["Rum", "Lime Juice", "Brandy", "Grenadine", "Pineapple Juice"],
+    instructions: "Shake all ingredients with ice. Strain into a glass filled with ice and garnish with a cherry and orange slice."
+  }
 };
  
 
