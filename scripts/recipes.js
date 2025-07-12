@@ -160,40 +160,57 @@ const drinkRecipes = {
     glass: "Highball Glass"
   },
   "Cherry Limeade": {
-    ingredients: ["Vodka", "Cherry Juice", "Lime Juice", "Simple Syrup", "Soda Water"],
-    instructions: "Shake vodka, cherry juice, lime juice, and simple syrup with ice. Strain into a glass filled with ice and top with soda water."
+    ingredients: ["Vodka", "Sprite", "Lime Juice", "Grenadine"],
+    instructions: "Mix 2 oz vodka, 4 oz Sprite, 1/2 oz lime juice, and 1/2 oz grenadine with ice. Strain into a glass filled with ice and garnish with a lime slice.",
+    garnishes: ["Lime Slice"],
+    glass: "Highball Glass"
   },
   "Clover Club": {
     ingredients: ["Gin", "Lemon Juice", "Raspberry Syrup", "Egg White"],
-    instructions: "Shake gin, lemon juice, raspberry syrup, and egg white without ice to emulsify. Add ice and shake again. Strain into a chilled glass."
+    instructions: "Shake 2 oz gin, 1/2 oz lemon juice, 1/2 oz raspberry syrup, and 1 egg white without ice. Add ice and shake again. Strain into a coupe glass. Garnish with a raspberry.",
+    garnishes: ["Raspberry"],
+    glass: "Coupe Glass"
   },
   "Corpse Reviver #2": {
     ingredients: ["Gin", "Cointreau", "Lillet Blanc", "Lemon Juice", "Absinthe"],
-    instructions: "Shake all ingredients with ice. Strain into a chilled glass and garnish with a lemon twist."
+    instructions: "Rinse a cocktail glass with 1 teaspoon of absinthe.  Mix 3/4 oz gin, 3/4 oz Cointreau, 3/4 oz Lillet Blanc, and 3/4 oz lemon juice with ice. Strain into a coupe glass and garnish with a lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Coupe Glass"
   },
   "Cosmopolitan": {
     ingredients: ["Vodka", "Triple Sec", "Lime Juice", "Cranberry Juice"],
-    instructions: "Shake vodka, triple sec, lime juice, and cranberry juice with ice. Strain into a chilled martini glass."
+    instructions: "Shake 1 1/2 oz vodka, 3/4 oz triple sec, 3/4 oz lime juice, and 3/4 oz cranberry juice with ice. Strain into a cocktail glass and garnish with lime slice.",
+    garnishes: ["Lime Slice"],
+    glass: "Cocktail Glass"
   },
   "Cuba Libre": {
     ingredients: ["Rum", "Cola", "Lime Juice"],
-    instructions: "Pour rum over ice, add lime juice, and top with cola. Stir gently and garnish with a lime wedge."
+    instructions: "Pour 2 oz rum over ice, add 1/2 oz lime juice, and top with 4 oz cola. Stir gently and garnish with a lime slice.",
+    garnishes: ["Lime Slice"],
+    glass: "Highball Glass"
   },
   "Daiquiri": {
     ingredients: ["Rum", "Lime Juice", "Simple Syrup"],
-    instructions: "Shake rum, lime juice, and simple syrup with ice. Strain into a chilled glass."
+    instructions: "Shake 2 oz rum, 3/4 oz lime juice, and 1/2 oz simple syrup with ice. Strain into a cocktail glass and garnish with a lime slice.",
+    garnishes: ["Lime Slice"],
+    glass: "Cocktail Glass"
   },
   "Dark and Stormy": {
     ingredients: ["Rum", "Ginger Beer", "Lime Juice"],
-    instructions: "Pour rum over ice, add lime juice, and top with ginger beer. Stir gently and garnish with a lime wedge."
+    instructions: "Pour 2 oz rum over ice, add 1/2 oz lime juice, and top with 4 oz ginger beer. Stir gently and garnish with a lime slice.",
+    garnishes: ["Lime Slice"],
+    glass: "Highball Glass"
   },
   "Dog Days of Summer": {
     ingredients: ["Bourbon", "Sweet Vermouth", "Lemon Juice", "Beer (Summer Ale)"],
-    instructions: "Shake bourbon, sweet vermouth, and lemon juice with ice. Strain into a glass filled with ice and top with summer ale."
+    instructions: "Shake 1/2 oz bourbon, 1/2 oz sweet vermouth, and 1/2 oz lemon juice with ice. Strain into a highball glass filled with ice and top with 6 oz summer ale. Garnish with a lemon slice.",
+    garnishes: ["Lemon Slice"],
+    glass: "Highball Glass"
   },
   "Espresso Martini": {
     ingredients: ["Vodka", "Espresso", "Coffee Liqueur"],
-    instructions: "Shake vodka, espresso, and coffee liqueur with ice. Strain into a chilled martini glass."
+    instructions: "Shake 2 oz vodka, 1 oz espresso, and 1/2 oz coffee liqueur with ice. Strain into a cocktail glass.",
+    glass: "Cocktail Glass"
   },
   "Fernadito": {
     ingredients: ["Fernet", "Cola"],
