@@ -9,6 +9,8 @@ Small steps:
 5:  Format the liquor lists and ingredient lists that are carried forward
 6:  Format the 'show all recipes' list
 7:  Move the liqueurs/wines to the liquors page?
+8:  Put Honey and Honey syrup together
+9:  Add note about sugar to make simple syrup, code sugar to select for both simple syrup and sugar
 
 
 Big steps:
