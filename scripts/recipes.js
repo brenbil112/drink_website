@@ -214,47 +214,67 @@ const drinkRecipes = {
   },
   "Fernadito": {
     ingredients: ["Fernet", "Cola"],
-    instructions: "Pour fernet over ice and top with cola. Stir gently and garnish with a lime wedge."
+    instructions: "Pour 1 1/2 oz fernet over ice and top with 3 1/2 oz cola. Stir gently and garnish with a lime wedge.",
+    garnishes: ["Lime Wedge"],
+    glass: "Rocks Glass"
   },
   "French 75": {
     ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Champagne"],
-    instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass and top with champagne."
+    instructions: "Shake 1 oz gin, 1/2 oz lemon juice, and 1/2 oz simple syrup with ice. Strain into a flute glass and top with 3 oz champagne. Garnish with a lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Flute Glass"
   },
   "French Connection": {
     ingredients: ["Cognac", "Amaretto"],
-    instructions: "Pour cognac and amaretto over ice in a glass. Stir gently and serve."
+    instructions: "Pour 1 1/2 oz cognac and 3/4 oz amaretto over ice in a rocks glass. Stir gently and garnish with a lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Rocks Glass"
   },
   "Gimlet": {
     ingredients: ["Gin", "Lime Juice", "Simple Syrup"],
-    instructions: "Shake gin, lime juice, and simple syrup with ice. Strain into a chilled glass."
+    instructions: "Shake 2 1/2 gin, 1/2 oz lime juice, and 1/2 oz simple syrup with ice. Strain into a coupe glass and garnish with a lime slice.",
+    garnishes: ["Lime Slice"],
+    glass: "Coupe Glass"
   },
   "Gin and Juice": {
     ingredients: ["Gin", "Orange Juice"],
-    instructions: "Pour gin over ice and top with orange juice. Stir gently and garnish with an orange slice."
+    instructions: "Pour 2 oz gin over ice and top with 4 oz orange juice. Stir gently and garnish with an orange slice.",
+    garnishes: ["Orange Slice"],
+    glass: "Highball Glass"
   },
   "Gin and Tonic": {
     ingredients: ["Gin", "Tonic Water"],
-    instructions: "Pour 2 oz of gin over ice and top with tonic water. Garnish with a lime wedge."
+    instructions: "Pour 2 oz of gin over ice and top with 4 oz tonic water. Garnish with a lime wedge.",
+    garnishes: ["Lime Wedge"],
+    glass: "Highball Glass"
   },
   "Gin Buck": {
     ingredients: ["Gin", "Ginger Ale", "Lime Juice"],
-    instructions: "Pour gin and lime juice over ice, top with ginger ale, and stir gently. Garnish with a lime wedge."
+    instructions: "Pour 1 1/2 oz gin and 1/2 oz lime juice over ice, top with 4 oz ginger ale, and stir gently. Garnish with a lime wedge.",
+    garnishes: ["Lime Wedge"],
+    glass: "Highball Glass"
   },
   "Gin Fizz": {
-    ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water"],
-    instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass and top with soda water."
+    ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water", "Egg White"],
+    instructions: "Shake 2 oz gin, 1 oz lemon juice, 3/4 oz simple syrup, and 1 egg white without ice for about 15 seconds, then add ice and continue shaking. Strain into a glass and top with 1 oz soda water.",
+    glass: "Highball Glass"
   },
   "Gin Rickey": {
     ingredients: ["Gin", "Lime Juice", "Soda Water"],
-    instructions: "Pour gin and lime juice over ice, top with soda water, and stir gently. Garnish with a lime wedge."
+    instructions: "Pour 2 oz gin and 1/2 lime juice over ice, top with 4 oz soda water, and stir gently. Garnish with a lime wedge.",
+    garnishes: ["Lime Wedge"],
+    glass: "Highball Glass"
   },
   "Gin Sour": {
-    ingredients: ["Gin", "Lemon Juice", "Simple Syrup"],
-    instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a chilled glass."
+    ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Egg White", "Bitters"],
+    instructions: "Shake 2 oz gin, 1 oz lemon juice, 3/4 oz simple syrup, and 1 egg white without ice for about 15 seconds, then add ice and continue shaking. Strain into a coupe glass and add 3 dashes of bitters.",
+    glass: "Coupe Glass"
   },
   "Gold Rush": {
     ingredients: ["Bourbon", "Lemon Juice", "Honey Syrup"],
-    instructions: "Shake bourbon, lemon juice, and honey syrup with ice. Strain into a chilled glass."
+    instructions: "Shake 2 oz bourbon, 3/4 oz lemon juice, and 3/4 oz honey syrup with ice. Strain into a rocks glass and garnish with lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Rocks Glass"
   },
   "Golden Cadillac": {
     ingredients: ["Galliano", "Cream", "Crème de Cacao"],
@@ -294,15 +314,19 @@ const drinkRecipes = {
   },
   "Hot Toddy": {
     ingredients: ["Bourbon", "Honey", "Lemon Juice"],
-    instructions: "Mix bourbon, honey, and lemon juice in a glass. Top with hot water and stir until honey is dissolved."
+    instructions: "Mix 1 1/2 oz bourbon, 1/2 oz honey, and 1/2 oz lemon juice in a glass mug. Top with hot water and stir until honey is dissolved. Garnish with a lemon slice and cinnamon stick.",
+    garnishes: ["Lemon Slice", "Cinnamon Stick"],
+    glass: "Glass Mug"
   },
   "Hurricane": {
     ingredients: ["Rum", "Lemon Juice", "Passion Fruit Juice", "Simple Syrup"],
     instructions: "Shake rum, lemon juice, passion fruit juice, and simple syrup with ice. Strain into a glass filled with ice."
   },
   "In Cold Blood": {
-    ingredients: ["Rye", "Sweet Vermouth", "Campari", "Orange Bitters"],
-    instructions: "Stir rye, sweet vermouth, Campari, and orange bitters with ice. Strain into a chilled glass and garnish with an orange twist." 
+    ingredients: ["Rye", "Sweet Vermouth", "Cynar"],
+    instructions: "Stir 1 oz rye, 1 oz sweet vermouth, and 1 oz Cynar into a rocks glass with ice. Stir well to combine and garnish with a lemon twist and pinch of salt.",
+    garnishes: ["Lemon Twist", "Salt"],
+    glass: "Rocks Glass" 
   },
   /*"Irish Coffee": {
     ingredients: ["Irish Whiskey", "Hot Coffee", "Sugar", "Cream"],
@@ -337,20 +361,28 @@ const drinkRecipes = {
     instructions: "Shake rum, lime juice, orange liqueur, and orgeat syrup with ice. Strain into a glass filled with crushed ice and garnish with mint and a lime wheel."
   },
   "Manhattan (Bourbon)": {
-  ingredients: ["Bourbon", "Vermouth", "Bitters"],
-  instructions: "Stir bourbon, sweet vermouth, and bitters with ice. Strain into a chilled glass and garnish with a cherry."
+  ingredients: ["Bourbon", "Sweet Vermouth", "Bitters"],
+  instructions: "Stir 2 oz bourbon, 1 oz sweet vermouth, and 2 dashes of bitters with ice. Strain into a coupe glass and garnish with a cherry.",
+  garnishes: ["Cherry"],
+  glass: "Coupe Glass"
   },
   "Manhattan (Rye)": {
-    ingredients: ["Rye", "Vermouth", "Bitters"],
-    instructions: "Stir rye, sweet vermouth, and bitters with ice. Strain into a chilled glass and garnish with a cherry."
+    ingredients: ["Rye", "Sweet Vermouth", "Bitters"],
+    instructions: "Stir 2 oz rye, 1 oz sweet vermouth, and 2 dashes of bitters with ice. Strain into a coupe glass and garnish with a cherry.",
+    garnishes: ["Cherry"],
+    glass: "Coupe Glass"
   },
   "Maple Bourbon Smash": {
-    ingredients: ["Bourbon", "Lemon Juice", "Maple Syrup", "Mint"],
-    instructions: "Muddle mint with lemon juice and maple syrup. Add bourbon and ice, then shake and strain into a glass."
+    ingredients: ["Bourbon", "Lemon Juice", "Maple Syrup"],
+    instructions: "Shake 2 oz bourbon, 1 oz lemon juice, and 1 oz maple syrup with ice. Strain into a rocks glass with ice and garnish with a lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Rocks Glass"
   },
   "Maple Old Fashioned": {
     ingredients: ["Bourbon", "Maple Syrup", "Bitters"],
-    instructions: "Muddle sugar with bitters, add bourbon and maple syrup, then stir with ice. Garnish with an orange twist."
+    instructions: "Stir 2 oz bourbon, 1/2 teaspoon of maple syrup, and 3 dashes of bitters in a rocks glass with ice. Garnish with a cherry.",
+    garnishes: ["Cherry"],
+    glass: "Rocks Glass"
   },
   "Margarita": {
     ingredients: ["Tequila", "Lime Juice", "Triple Sec"],
@@ -384,7 +416,9 @@ const drinkRecipes = {
   },
   "Mint Julep": {
     ingredients: ["Bourbon", "Mint", "Simple Syrup"],
-    instructions: "Muddle mint with simple syrup, add crushed ice and bourbon, then stir until chilled."
+    instructions: "In a julep cup muddle 8 leaves of mint with 1/2 oz simple syrup, add crushed ice and 2 oz bourbon, then stir.  Garnish with a mint sprig.",
+    garnishes: ["Mint Sprig"],
+    glass: "Julep Cup"
   },
   "Mojito": {
     ingredients: ["Rum", "Mint", "Lime Juice", "Soda Water"],
@@ -399,32 +433,45 @@ const drinkRecipes = {
     instructions: "Shake gin, lemon juice, and honey syrup with ice. Strain into a chilled glass."
   },
   "Negroni": {
-    ingredients: ["Gin", "Vermouth", "Campari"],
-    instructions: "Stir gin, sweet vermouth, and Campari with ice. Strain into a rocks glass and garnish with orange peel."
+    ingredients: ["Gin", "Sweet Vermouth", "Campari"],
+    instructions: "Stir 1 oz gin, 1 oz sweet vermouth, and 1 oz Campari with ice. Strain into a rocks glass with ice and garnish with orange peel.",
+    garnishes: ["Orange Peel"],
+    glass: "Rocks Glass"
   },
   "Negroni Bianco": {
     ingredients: ["Gin", "Dry Vermouth", "Aperol"],
-    instructions: "Stir gin, dry vermouth, and Aperol with ice. Strain into a chilled glass and garnish with a lemon twist."
+    instructions: "Stir 1 oz gin, 1 oz dry vermouth, and 1 oz Aperol with ice. Strain into a rocks glass with ice and garnish with a lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Rocks Glass"
   },
   "Negroni Sbagliato": {
     ingredients: ["Prosecco", "Campari", "Sweet Vermouth"],
-    instructions: "Pour Prosecco, Campari, and sweet vermouth over ice in a glass. Stir gently and garnish with an orange slice."
+    instructions: "Pour 3 oz Prosecco, 1 oz Campari, and 1 oz sweet vermouth over ice in a rocks glass. Stir gently and garnish with an orange peel.",
+    garnishes: ["Orange Peel"],
+    glass: "Rocks Glass"
   },
   "New York Sour": {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Red Wine"],
-    instructions: "Shake bourbon, lemon juice, and simple syrup with ice. Strain into a glass and float red wine on top."
+    instructions: "Shake 2 oz bourbon, 1 oz lemon juice, and 3/4 oz simple syrup with ice. Strain into a rocks glass and float 1/2 oz red wine on top by slowly pouring over the back of a spoon.",
+    glass: "Rocks Glass",
   },
   "Nor'easter": {
     ingredients: ["Bourbon", "Lime Juice", "Ginger Beer", "Maple Syrup"],
-    instructions: "Shake bourbon, lime juice, and maple syrup with ice. Strain into a glass filled with ice and top with ginger beer."
+    instructions: "Shake 2 oz bourbon, 1/2 oz lime juice, and 1/2 oz maple syrup with ice. Strain into a rocks glass filled with ice and top with 2 oz ginger beer. Garnish with a lime slice.",
+    garnishes: ["Lime Slice"],
+    glass: "Rocks Glass"
   },
   "Northern Lights": {
-    ingredients: ["Gin", "Lemon Juice", "Simple Syrup", "Blue Curacao"],
-    instructions: "Shake gin, lemon juice, and simple syrup with ice. Strain into a chilled glass and float blue curacao on top."
+    ingredients: ["Vodka", "Lime Juice", "Simple Syrup", "Champagne"],
+    instructions: "Shake 1 1/2 oz vodka, 3/4 oz lime juice, and 1 oz simple syrup with ice. Strain into a rocks glass and add 1 oz champagne on top.  Garnish with a mint sprig.",
+    garnishes: ["Mint Sprig"],
+    glass: "Rocks Glass"
   },
   "Old Cuban": {
-    ingredients: ["Rum", "Champagne", "Mint", "Lime Juice", "Simple Syrup"],
-    instructions: "Muddle mint with lime juice and simple syrup. Add rum and ice, shake, then strain into a glass and top with champagne."
+    ingredients: ["Rum", "Champagne", "Mint", "Lime Juice", "Simple Syrup", "Bitters"],
+    instructions: "Muddle 6 leaves of mint with 3/4 oz lime juice and 1 oz simple syrup in a shaker. Add 1 1/2 oz rum, 2 dashes of bitters, and ice then shake. Strain into a coupe glass and top with 2 oz champagne. Garnish with a mint sprig.",
+    garnishes: ["Mint Sprig"],
+    glass: "Coupe Glass"
   },
   "Old Fashioned": {
     ingredients: ["Bourbon", "Simple Syrup", "Bitters"],
@@ -490,31 +537,45 @@ const drinkRecipes = {
   },
   "Sazerac (Bourbon)": {
     ingredients: ["Bourbon", "Simple Syrup", "Bitters", "Absinthe"],
-    instructions: "Muddle sugar with bitters, add bourbon and ice, stir, then rinse a chilled glass with absinthe and strain the drink into it."
+    instructions: "Mix 2 oz of bourbon, 3/4 oz simple syrup, and 4 dashes of bitters with ice and stir, then rinse a rocks glass with 1/4 oz absinthe and strain the drink into it. Garnish with a lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Rocks Glass"
   },
   "Sazerac (Rye)": {
     ingredients: ["Rye", "Simple Syrup", "Bitters", "Absinthe"],
-    instructions: "Muddle sugar with bitters, add rye and ice, stir, then rinse a chilled glass with absinthe and strain the drink into it."
+    instructions: "Mix 2 oz of rye, 3/4 oz simple syrup, and 4 dashes of bitters with ice and stir, then rinse a rocks glass with 1/4 oz absinthe and strain the drink into it. Garnish with a lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Rocks Glass"
   },
-  "Scofflow": {
+  "Scofflow (Bourbon)": {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Egg White"],
-    instructions: "Shake all ingredients without ice to emulsify the egg white, then add ice and shake again. Strain into a chilled glass."
+    instructions: "Shake 1 1/2 oz bourbon, 1 oz dry vermouth, 3/4 oz lemon juice, 3/4 oz grenadine and 1 dash of bitters with ice. Strain into a cocktail glass and garnish with a lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Cocktail Glass"
+  },
+  "Scofflow (Rye)": {
+    ingredients: ["Rye", "Lemon Juice", "Simple Syrup", "Egg White"],
+    instructions: "Shake 1 1/2 oz rye, 1 oz dry vermouth, 3/4 oz lemon juice, 3/4 oz grenadine and 1 dash of bitters with ice. Strain into a cocktail glass and garnish with a lemon twist.",
+    garnishes: ["Lemon Twist"],
+    glass: "Cocktail Glass"
   },
   "Screwdriver": {
     ingredients: ["Vodka", "Orange Juice"],
-    instructions: "Pour vodka over ice and top with orange juice. Stir gently and garnish with an orange slice."
+    instructions: "Pour 2 oz vodka over ice and top with 5 oz orange juice. Stir gently and garnish with an orange slice.",
+    garnishes: ["Orange Slice"], 
+    glass: "Highball Glass"
   },
   "Sea Breeze": {
     ingredients: ["Vodka", "Cranberry Juice", "Grapefruit Juice"],
-    instructions: "Pour vodka over ice, add cranberry juice and grapefruit juice. Stir gently and garnish with a lime wedge."
+    instructions: "Pour 1 1/2 oz vodka over ice, add 3 oz cranberry juice and 1 1/2 oz grapefruit juice. Stir gently and garnish with a lime slice.",
+    garnishes: ["Lime Slice"],
+    glass: "Highball Glass"
   },
-  "Shadow Woman (Gin)": {
-    ingredients: ["Gin", "Lemon Juice", "Blackberry Syrup"],
-    instructions: "Shake gin, lemon juice, and blackberry syrup with ice. Strain into a chilled glass and garnish with a blackberry."
-  },
-  "Shadow Woman (Bourbon)": {
-    ingredients: ["Bourbon", "Lemon Juice", "Blackberry Syrup"],
-    instructions: "Shake bourbon, lemon juice, and blackberry syrup with ice. Strain into a chilled glass and garnish with a blackberry."
+  "Shadow Woman": {
+    ingredients: ["Bourbon", "Pear Brandy", "Honey", "Bitters"],
+    instructions: "Shake  1 1/2 oz bourbon, 1/2 oz Pear Brandy, 1 teaspoon honey, and 2 dashes of bitters with ice. Strain into a rocks glass and garnish with an orange peel.",
+    garnishes: ["Orange Peel"],
+    glass: "Rocks Glass"
   },
   "Sherry Cobble": {
     ingredients: ["Sherry", "Simple Syrup", "Bitters"],
@@ -574,11 +635,15 @@ const drinkRecipes = {
   },
   "Whiskey Smash (Bourbon)": {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup", "Mint"],
-    instructions: "Muddle mint with lemon juice and simple syrup. Add bourbon and ice, then shake and strain into a glass."
+    instructions: "Muddle 8 mint leaves with 3/4 oz lemon juice and 1/2 oz simple syrup. Add 2 oz bourbon and ice, then shake and strain into a rocks glass. Garnish with a mint sprig.",
+    garnishes: ["Mint Sprig"],
+    glass: "Rocks Glass"
   },
   "Whiskey Smash (Rye)": {
     ingredients: ["Rye", "Lemon Juice", "Simple Syrup", "Mint"],
-    instructions: "Muddle mint with lemon juice and simple syrup. Add rye and ice, then shake and strain into a glass."
+    instructions: "Muddle 8 mint leaves with 3/4 oz lemon juice and 1/2 oz simple syrup. Add 2 oz rye and ice, then shake and strain into a rocks glass. Garnish with a mint sprig.",
+    garnishes: ["Mint Sprig"],
+    glass: "Rocks Glass"
   },
   "Whiskey Sour (Bourbon)": {
     ingredients: ["Bourbon", "Lemon Juice", "Simple Syrup"],
