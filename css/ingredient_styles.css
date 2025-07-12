@@ -110,7 +110,7 @@
     }
 
     .collapsible-container {
-      padding: 8px;  /* Reduce from 20px to 8px */
+      padding: 0px;  /* Reduce from 20px to 8px to 0 px */
     }
   
     .checkbox-button {
