@@ -106,7 +106,11 @@
   
   @media (max-width: 600px) {
     .ingredient-section {
-      width: 90%;
+      width: 100%;
+    }
+
+    .collapsible-container {
+      padding: 8px;  /* Reduce from 20px to 8px */
     }
   
     .checkbox-button {
