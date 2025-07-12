@@ -278,39 +278,55 @@ const drinkRecipes = {
   },
   "Golden Cadillac": {
     ingredients: ["Galliano", "Cream", "Crème de Cacao"],
-    instructions: "Shake all ingredients with ice. Strain into a chilled glass."
+    instructions: "Shake 1 oz Galliano, 1 oz cream, and 1 oz Crème de Cacao with ice. Strain into a coupe glass and garnish with chocolate shavings.",
+    garnishes: ["Chocolate"],
+    glass: "Coupe Glass"
   },
   "Grog": {
-    ingredients: ["Rum", "Lemon Juice", "Honey", "Water"],
-    instructions: "Mix rum, lemon juice, honey, and hot water in a glass. Stir until honey is dissolved and serve warm."
+    ingredients: ["Rum", "Lime Juice", "Soda Water", "Grapefruit Juice"],
+    instructions: "Mix 2 oz rum, 1/2 oz lime juice, 1/2 oz grapefruit juice, and 1 oz soda water in a glass with ice. Stir and garnish with a lime slice.",
+    garnishes: ["Lime Slice"],
+    glass: "Highball Glass"
   },
   "Hanky Panky": {
     ingredients: ["Gin", "Sweet Vermouth", "Fernet"],
-    instructions: "Stir gin, sweet vermouth, and fernet with ice. Strain into a chilled glass and garnish with an orange twist."
+    instructions: "Stir 1 1/2 oz gin, 1 1/2 oz sweet vermouth, and 1/2 teaspoon fernet with ice. Strain into a cocktail glass and garnish with an orange peel.",
+    garnishes: ["Orange Peel"],
+    glass: "Cocktail Glass"
   },
   "Hibiscus Daiquiri": {
     ingredients: ["Rum", "Hibiscus Syrup", "Lime Juice"],
-    instructions: "Shake rum, hibiscus syrup, and lime juice with ice. Strain into a chilled glass."
+    instructions: "Shake 2 oz rum, 1/2 oz hibiscus syrup, and 1 oz lime juice with ice. Strain into a cocktail glass.",
+    glass: "Cocktail Glass"
   },
   "Hibiscus Margarita": {
-    ingredients: ["Tequila", "Hibiscus Syrup", "Lime Juice"],
-    instructions: "Shake tequila, hibiscus syrup, and lime juice with ice. Strain into a salt-rimmed glass and garnish with a lime wedge."
+    ingredients: ["Tequila", "Hibiscus Syrup", "Lime Juice", "Triple Sec"],
+    instructions: "Shake 2 oz tequila, 1 oz hibiscus syrup, 1 oz lime juice, and 1 oz Triple Sec with ice. Strain into a salt-rimmed glass and garnish with a lime wedge.",
+    garnishes: ["Lime Wedge", "Salt"],
+    glass: "Rocks Glass"
   },
   "Hibiscus Mojito": {
     ingredients: ["Rum", "Hibiscus Syrup", "Lime Juice", "Mint", "Soda Water"],
-    instructions: "Muddle mint with lime juice and hibiscus syrup. Add rum and ice, top with soda water, and stir."
+    instructions: "Muddle 8 mint leaves with 3/4 oz lime juice and 3/4 oz hibiscus syrup. Add 3 oz rum and ice, top with 1 oz soda water, and stir. Garnish with a mint sprig.",
+    garnishes: ["Mint Sprig"],
+    glass: "Highball Glass"
   },
   "Hibiscus Sour": {
     ingredients: ["Gin", "Hibiscus Syrup", "Lemon Juice", "Egg White"],
-    instructions: "Shake gin, hibiscus syrup, lemon juice, and egg white without ice to emulsify. Add ice and shake again. Strain into a chilled glass."
+    instructions: "Shake 2 oz gin, 3/4 oz hibiscus syrup, 3/4 oz lemon juice, and egg white without ice. Add ice and shake again. Strain into a coupe glass.",
+    glass: "Coupe Glass"
   },
   "Hibiscus Tonic": {
     ingredients: ["Gin", "Hibiscus Syrup", "Tonic Water"],
-    instructions: "Pour gin and hibiscus syrup over ice, top with tonic water, and stir gently. Garnish with a lime wedge."
+    instructions: "Pour 2 oz gin and 1/2 oz hibiscus syrup over ice, top with 4 oz tonic water, and stir gently. Garnish with a lime wedge.",
+    garnishes: ["Lime Wedge"],
+    glass: "Highball Glass"
   },
   "Hibiscus Vodka Collins": {
     ingredients: ["Vodka", "Hibiscus Syrup", "Lemon Juice", "Soda Water"],
-    instructions: "Shake vodka, hibiscus syrup, and lemon juice with ice. Strain into a glass filled with ice and top with soda water."
+    instructions: "Shake 2 oz vodka, 1/2 oz hibiscus syrup, and 1/2 oz lemon juice with ice. Strain into a glass filled with ice and top with 2 oz soda water. Garnish with a lemon slice.",
+    garnishes: ["Lemon Slice"],
+    glass: "Highball Glass"
   },
   "Hot Toddy": {
     ingredients: ["Bourbon", "Honey", "Lemon Juice"],
@@ -319,8 +335,10 @@ const drinkRecipes = {
     glass: "Glass Mug"
   },
   "Hurricane": {
-    ingredients: ["Rum", "Lemon Juice", "Passion Fruit Juice", "Simple Syrup"],
-    instructions: "Shake rum, lemon juice, passion fruit juice, and simple syrup with ice. Strain into a glass filled with ice."
+    ingredients: ["Rum", "Lemon Juice", "Orange Juice", "Passion Fruit Juice", "Simple Syrup"],
+    instructions: "Shake 4 oz rum, 1 oz orange juice, 1/2 oz lemon juice, 2 oz passion fruit juice, and 1/2 oz simple syrup with ice. Strain into a glass filled with ice. Garnish with an orange slice and cherry.",
+    garnishes: ["Orange Slice", "Cherry"],
+    glass: "Hurricane Glass"
   },
   "In Cold Blood": {
     ingredients: ["Rye", "Sweet Vermouth", "Cynar"],
