@@ -1,35 +1,84 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const recipeList = document.getElementById("allRecipes");
+const groups = {
+    Bourbon: [],
+    Gin: [],
+    Rum: [],
+    Rye: [],
+    Tequila: [],
+    Vodka: [],
+    "All Others": []
+  };
   
-    Object.keys(drinkRecipes).forEach(recipeName => {
-      const recipeItem = document.createElement("li");
+  const recipeGroupsContainer = document.getElementById("recipeGroupsContainer");
   
-      const button = document.createElement("button");
-      button.className = "recipe-btn";
-      button.textContent = recipeName;
+  // Group recipes by first ingredient
+  Object.entries(drinkRecipes).forEach(([recipeName, recipe]) => {
+    const firstIng = recipe.ingredients[0];
+    if (groups.hasOwnProperty(firstIng)) {
+      groups[firstIng].push({ name: recipeName, data: recipe });
+    } else {
+      groups["All Others"].push({ name: recipeName, data: recipe });
+    }
+  });
   
-      const detailsDiv = document.createElement("div");
-      detailsDiv.className = "recipe-details";
-      detailsDiv.style.display = "none";
+  function createRecipeButton(recipe) {
+    const button = document.createElement("button");
+    button.className = "recipe-btn";
+    button.textContent = recipe.name;
   
-      const recipe = drinkRecipes[recipeName];
+    const detailsDiv = document.createElement("div");
+    detailsDiv.className = "recipe-details";
+    detailsDiv.style.display = "none";
   
-      detailsDiv.innerHTML = `
-    <p><strong>Ingredients:</strong> ${Array.isArray(recipe.ingredients) ? recipe.ingredients.join(", ") : "N/A"}</p>
-    <p><strong>Instructions:</strong> ${recipe.instructions || "N/A"}</p>
-    <p><strong>Garnishes:</strong> ${Array.isArray(recipe.garnishes) ? recipe.garnishes.join(", ") : "N/A"}</p>
-    <p><strong>Glass:</strong> ${recipe.glass || "N/A"}</p>
+    const ingredients = recipe.data.ingredients?.join(", ") || "N/A";
+    const instructions = recipe.data.instructions || "N/A";
+    const garnishes = recipe.data.garnishes?.join(", ") || "None";
+    const glass = recipe.data.glass || "N/A";
+  
+    detailsDiv.innerHTML = `
+      <p><strong>Ingredients:</strong> ${ingredients}</p>
+      <p><strong>Instructions:</strong> ${instructions}</p>
+      <p><strong>Garnishes:</strong> ${garnishes}</p>
+      <p><strong>Glass:</strong> ${glass}</p>
     `;
-
   
-      button.addEventListener("click", () => {
-        detailsDiv.style.display =
-          detailsDiv.style.display === "none" ? "block" : "none";
-      });
-  
-      recipeItem.appendChild(button);
-      recipeItem.appendChild(detailsDiv);
-      recipeList.appendChild(recipeItem);
+    button.addEventListener("click", () => {
+      detailsDiv.style.display = detailsDiv.style.display === "none" ? "block" : "none";
     });
+  
+    const wrapper = document.createElement("li");
+    wrapper.appendChild(button);
+    wrapper.appendChild(detailsDiv);
+    return wrapper;
+  }
+  
+  
+  // Create collapsible groups
+  Object.entries(groups).forEach(([groupName, recipes]) => {
+    const groupContainer = document.createElement("div");
+    groupContainer.className = "ingredient-section";
+  
+    const collapsibleBtn = document.createElement("button");
+    collapsibleBtn.type = "button";
+    collapsibleBtn.className = "collapsible";
+    collapsibleBtn.textContent = groupName + ` (${recipes.length})`;
+  
+    const contentDiv = document.createElement("ul");
+    contentDiv.className = "content";
+    contentDiv.style.display = "none";
+  
+    recipes.forEach(recipe => {
+      const recipeBtn = createRecipeButton(recipe);
+      contentDiv.appendChild(recipeBtn);
+    });
+  
+    collapsibleBtn.addEventListener("click", () => {
+      const isVisible = contentDiv.style.display === "block";
+      contentDiv.style.display = isVisible ? "none" : "block";
+      collapsibleBtn.textContent = groupName + (isVisible ? ` (${recipes.length})` : ` (-)`);
+    });
+  
+    groupContainer.appendChild(collapsibleBtn);
+    groupContainer.appendChild(contentDiv);
+    recipeGroupsContainer.appendChild(groupContainer);
   });
   
