@@ -392,6 +392,7 @@ const drinkRecipes = {
     garnishes: ["Cherry"],
     glass: "Coupe Glass"
   },
+
   "Kentucky Buck": {
     ingredients: ["Bourbon", "Lemon Juice", "Ginger Beer", "Strawberry"],
     instructions: "Muddle 2-3 strawberries with 1 oz lemon juice. Add 2 oz bourbon and ice, then top with ginger beer. Stir gently and garnish with a strawberry.",
