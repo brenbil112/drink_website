@@ -808,4 +808,6 @@ const drinkRecipes = {
     glass: "Hurricane Glass"
   }
 };
+
+window.drinkRecipes = drinkRecipes;
  
