@@ -1,29 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("recipeListContainer");
-    const list = document.getElementById("allRecipes");
+    const recipeList = document.getElementById("allRecipes");
   
-    for (const [name, recipe] of Object.entries(window.drinkRecipes)) {
-      const item = document.createElement("li");
-      item.textContent = name;
-      item.style.cursor = "pointer";
+    Object.keys(drinkRecipes).forEach(recipeName => {
+      const recipeItem = document.createElement("li");
   
-      const details = document.createElement("div");
-      details.style.display = "none";
-      details.innerHTML = `
-        <strong>Ingredients:</strong> ${recipe.ingredients.join(", ")}<br>
-        <strong>Instructions:</strong> ${recipe.instructions}<br>
-        <strong>Garnishes:</strong> ${recipe.garnishes?.join(", ") || "None"}<br>
-        <strong>Glass:</strong> ${recipe.glass || "N/A"}
-      `;
+      const button = document.createElement("button");
+      button.className = "recipe-btn";
+      button.textContent = recipeName;
   
-      item.addEventListener("click", () => {
-        details.style.display = details.style.display === "none" ? "block" : "none";
+      const detailsDiv = document.createElement("div");
+      detailsDiv.className = "recipe-details";
+      detailsDiv.style.display = "none";
+  
+      const recipe = drinkRecipes[recipeName];
+  
+      detailsDiv.innerHTML = `
+    <p><strong>Ingredients:</strong> ${Array.isArray(recipe.ingredients) ? recipe.ingredients.join(", ") : "N/A"}</p>
+    <p><strong>Instructions:</strong> ${recipe.instructions || "N/A"}</p>
+    <p><strong>Garnishes:</strong> ${Array.isArray(recipe.garnishes) ? recipe.garnishes.join(", ") : "N/A"}</p>
+    <p><strong>Glass:</strong> ${recipe.glass || "N/A"}</p>
+    `;
+
+  
+      button.addEventListener("click", () => {
+        detailsDiv.style.display =
+          detailsDiv.style.display === "none" ? "block" : "none";
       });
   
-      list.appendChild(item);
-      list.appendChild(details);
-    }
-  
-    container.style.display = "block";
+      recipeItem.appendChild(button);
+      recipeItem.appendChild(detailsDiv);
+      recipeList.appendChild(recipeItem);
+    });
   });
   
