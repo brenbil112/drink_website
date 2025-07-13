@@ -67,6 +67,14 @@ h1 {
   .shot-button {
     background-image: url("../images/shots.png");
   }
+
+  .recipe-button {
+    background-image: url("../images/shelves.png");
+  }
+  
+  .shopping-button {
+    background-image: url("../images/shelves.png");
+  }
   
   @media (max-width: 600px) {
     .button-container {
