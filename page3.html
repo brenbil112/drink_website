@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&#129347 Drink Options</title>
+  <script defer src="scripts/recipes.js"></script>
+  <script defer src="scripts/page3script.js"></script>
+  <script defer src="scripts/header_script.js"></script>
+  <link rel="stylesheet" href="css/cocktail_final_page_styles.css" />
+  <link rel="stylesheet" href="css/header_styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">&#129347 Highballer.app</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pages/favorites.html">Favorites</a>
+        <a href="recipe_submission.html">Recipe Submission</a>
+        <a class="coming-soon" href="index.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <div class="page3-container">
+    <h1>Your Selected Items:</h1>
+
+    <h2>Liquors:</h2>
+    <p id="liquorList"></p>
+
+    <h2>Ingredients:</h2>
+    <p id="ingredientList"></p>
+
+    <div id="recipeSection">
+      <button id="spinButton">🎰 Spin the Wheel</button>
+      <!-- 🔄 Added wheel animation container -->
+      <div id="wheelAnimation" class="roulette-container" style="display: none;">
+        <div class="roulette-wheel" id="rouletteWheel"></div>
+      </div>
+
+      <br><br>
+      <button id="revealButton">📋 All possible recipes you can make</button>
+
+      <div id="recipeListContainer" style="display: none; margin-top: 20px;">
+        <h2>Matching Recipes:</h2>
+        <ul id="matchingRecipes"></ul>
+      </div>
+    </div>
+    <a href="page2.html" id="backBtn">⬅ Back</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+.page3-container {
+  max-width: 800px;
+  margin: 0 0;         /* Center the entire section */
+  padding: 0 20px;
+}
+
+#spinButton,
+#revealButton {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 40px;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px 0;
+  width: 600px;
+  box-sizing: border-box;
+}
+
+.roulette-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin: 40px 0;
+}
+
+.roulette-wheel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 8px solid #333;
+  background: conic-gradient(
+    #c00 0% 12.5%,
+    #000 12.5% 25%,
+    #c00 25% 37.5%,
+    #000 37.5% 50%,
+    #c00 50% 62.5%,
+    #000 62.5% 75%,
+    #c00 75% 87.5%,
+    #000 87.5% 100%
+  );
+  animation: spin-wheel 3s ease-out forwards;
+}
+
+@keyframes spin-wheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1080deg); /* 3 full spins */
+  }
+}
+
+.result-box {
+  max-width: 600px;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.result-box h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .roulette-container {
+    margin: 30px 0;
+    height: auto;
+  }
+
+  .roulette-wheel {
+    width: 220px;
+    height: 220px;
+  }
+
+  #spinButton,
+  #revealButton {
+    font-size: 1.2rem;
+    padding: 14px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .result-box {
+    padding: 16px;
+    font-size: 1rem;
+  }
+}
+
+#backBtn {
+  text-decoration: none;
+  margin-top: 15px;
+  padding: 16px 36px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #3399ff, #2277cc);
+  color: white;
+  border: 2px solid #2277cc;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3),
+              0 4px 6px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+}
+
+#backBtn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+#backBtn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

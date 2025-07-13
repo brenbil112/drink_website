@@ -1,0 +1,23 @@
+.code-submit {
+    margin-top: 12px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #3399ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .code-submit:hover {
+    background-color: #2277cc;
+  }
+  
+  .code-error {
+    color: red;
+    margin-top: 10px;
+    font-size: 0.95rem;
+  }
+  

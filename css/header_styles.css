@@ -1,0 +1,75 @@
+.site-header {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    box-sizing: border-box; /* prevent padding overflow */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px;
+  }
+  
+  /* On smaller screens, stack logo and links vertically */
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-logo {
+      margin-bottom: 10px;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 100%;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+  
+    .nav-links a {
+      margin: 4px 8px 4px 0;
+      white-space: normal;
+      display: inline-block;
+    }
+  }
+  
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .nav-links a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Override desktop spacing on small screens */
+  @media (max-width: 600px) {
+    .nav-links {
+      flex-direction: row; /* keep horizontal wrap */
+      margin-top: 0;
+    }
+  
+    .nav-links a {
+      margin-left: 0;
+    }
+  }
+  

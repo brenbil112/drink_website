@@ -1,0 +1,130 @@
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .drink-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+    font-size: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    width: 260px;
+    height: 180px;
+  }
+  
+  .drink-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Dark overlay for text readability */
+  .drink-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+  
+  .drink-button span {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  
+  .cocktail-button {
+    background-image: url("../images/cocktails.png");
+  }
+  
+  .shot-button {
+    background-image: url("../images/shots.png");
+  }
+  
+  @media (max-width: 600px) {
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px; /* prevent edge clipping */
+    }
+  
+    .drink-button {
+      width: 100%;
+      max-width: 320px;  /* ✅ Limit width on mobile */
+      height: 140px;
+      font-size: 1.4rem;
+    }
+  }
+
+/* for page 1 */
+
+.checkbox-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 0;
+  }
+  
+  .checkbox-button {
+    display: inline-block;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+  
+  .checkbox-button:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+  }
+  
+  .checkbox-button input {
+    display: none;
+  }
+  
+  .checkbox-button:has(input:checked) {
+    background-color: #d0ebff;
+    border-color: #3399ff;
+    color: #000;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .checkbox-button {
+      font-size: 0.9rem;
+      padding: 10px 16px;
+    }
+  }
+  
