@@ -5,7 +5,7 @@ const groups = {
     Rye: [],
     Tequila: [],
     Vodka: [],
-    "All Others": []
+    "All Others": [],
   };
   
   const recipeGroupsContainer = document.getElementById("recipeGroupsContainer");
@@ -21,6 +21,8 @@ const groups = {
   });
   
   function createRecipeButton(recipe) {
+    const wrapper = document.createElement("li");
+  
     const button = document.createElement("button");
     button.className = "recipe-btn";
     button.textContent = recipe.name;
@@ -45,14 +47,12 @@ const groups = {
       detailsDiv.style.display = detailsDiv.style.display === "none" ? "block" : "none";
     });
   
-    const wrapper = document.createElement("li");
     wrapper.appendChild(button);
-    wrapper.appendChild(detailsDiv);
-    return wrapper;
+  
+    return { wrapper, detailsDiv };
   }
   
-  
-  // Create collapsible groups
+  // Create collapsible ingredient groups
   Object.entries(groups).forEach(([groupName, recipes]) => {
     const groupContainer = document.createElement("div");
     groupContainer.className = "ingredient-section";
@@ -60,25 +60,33 @@ const groups = {
     const collapsibleBtn = document.createElement("button");
     collapsibleBtn.type = "button";
     collapsibleBtn.className = "collapsible";
-    collapsibleBtn.textContent = groupName + ` (${recipes.length})`;
+    collapsibleBtn.textContent = `${groupName} (${recipes.length})`;
   
     const contentDiv = document.createElement("ul");
     contentDiv.className = "content";
     contentDiv.style.display = "none";
   
+    const detailsContainer = document.createElement("div");
+    detailsContainer.className = "details-container";
+  
     recipes.forEach(recipe => {
-      const recipeBtn = createRecipeButton(recipe);
-      contentDiv.appendChild(recipeBtn);
+      const { wrapper, detailsDiv } = createRecipeButton(recipe);
+      contentDiv.appendChild(wrapper);
+      detailsContainer.appendChild(detailsDiv); // placed after flex row
     });
   
     collapsibleBtn.addEventListener("click", () => {
       const isVisible = contentDiv.style.display === "block";
       contentDiv.style.display = isVisible ? "none" : "block";
-      collapsibleBtn.textContent = groupName + (isVisible ? ` (${recipes.length})` : ` (-)`);
+      detailsContainer.style.display = isVisible ? "none" : "block";
+      collapsibleBtn.textContent = isVisible
+        ? `${groupName} (${recipes.length})`
+        : `${groupName} (-)`;
     });
   
     groupContainer.appendChild(collapsibleBtn);
     groupContainer.appendChild(contentDiv);
+    groupContainer.appendChild(detailsContainer);
     recipeGroupsContainer.appendChild(groupContainer);
   });
   

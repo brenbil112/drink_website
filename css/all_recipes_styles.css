@@ -1,9 +1,9 @@
-/* Container for each group */
+/* === Container for each ingredient group === */
 .ingredient-section {
     margin-bottom: 24px;
   }
   
-  /* Collapsible group buttons */
+  /* === Collapsible group buttons === */
   .collapsible {
     background-color: #3399ff;
     color: white;
@@ -24,26 +24,36 @@
     background-color: #2277cc;
   }
   
-  .content {
+/* Force the .content container to wrap buttons horizontally */
+.content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 12px;
     padding: 0;
     margin: 0;
     list-style: none;
-    justify-content: flex-start;
   }
   
-  .content li {
-    flex: 1 1 300px;        /* allow shrinking/growing with base 300px */
-    max-width: 300px;
-    box-sizing: border-box;
+  /* Ensure list items take up fixed width and can sit side-by-side */
+.content li {
+  display: block;               /* ✅ force block instead of default list-item */
+  flex: 0 0 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
   
-  /* Recipe button */
+  /* === Recipe buttons === */
   .recipe-btn {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     background-color: #f7f7f7;
     border: 2px solid #ccc;
@@ -62,7 +72,7 @@
     transform: scale(1.02);
   }
   
-  /* Recipe details toggle block */
+  /* === Recipe details toggle block === */
   .recipe-details {
     margin-top: 4px;
     background-color: #fff;
@@ -71,15 +81,23 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
   
-  /* Responsive stacking on smaller screens */
+  /* === Responsive: 2 per row on tablets === */
+  @media (max-width: 900px) {
+    .content li {
+      flex: 1 1 calc(50% - 12px);
+      max-width: calc(50% - 12px);
+    }
+  }
+  
+  /* === Responsive: stacked on phones === */
   @media (max-width: 600px) {
-    .ingredient-section .content {
+    .content {
       justify-content: center;
     }
   
     .content li {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
   }
   
