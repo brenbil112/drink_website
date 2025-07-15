@@ -82,7 +82,7 @@ const groups = {
     collapsibleBtn.addEventListener("click", () => {
       const isVisible = contentDiv.style.display === "block";
       contentDiv.style.display = isVisible ? "none" : "block";
-      collapsibleBtn.textContent = groupName + (isVisible ? ` (${recipes.length})` : ` (-)`);
+      collapsibleBtn.textContent = groupName + (isVisible ? ` (${recipes.length})` : ` (${recipes.length})`);
     });
   
     groupContainer.appendChild(collapsibleBtn);
