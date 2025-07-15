@@ -22,7 +22,7 @@
   }
   
   .content {
-    display: flex !important; /* force flex context */
+    display: none; /*!important; force flex context */
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 12px;
@@ -69,6 +69,11 @@
     padding: 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
+
+  .content.open {
+    display: flex;  /* horizontal layout when open */
+  }
+  
   
   @media (max-width: 600px) {
     .content li {

@@ -32,7 +32,7 @@ const groups = {
   
     const detailsDiv = document.createElement("div");
     detailsDiv.className = "recipe-details";
-    detailsDiv.style.display = "none";
+    detailsDiv.style.display = "none"; // this is still OK here for nested toggle
   
     const ingredients = recipe.data.ingredients?.join(", ") || "N/A";
     const instructions = recipe.data.instructions || "N/A";
@@ -68,11 +68,10 @@ const groups = {
     const collapsibleBtn = document.createElement("button");
     collapsibleBtn.type = "button";
     collapsibleBtn.className = "collapsible";
-    collapsibleBtn.textContent = groupName + ` (${recipes.length})`;
+    collapsibleBtn.textContent = `${groupName} (+)`;
   
     const contentDiv = document.createElement("ul");
-    contentDiv.className = "content";
-    contentDiv.style.display = "none";
+    contentDiv.className = "content"; // default hidden in CSS (display: none)
   
     recipes.forEach(recipe => {
       const recipeBtn = createRecipeButton(recipe);
@@ -80,9 +79,9 @@ const groups = {
     });
   
     collapsibleBtn.addEventListener("click", () => {
-      const isVisible = contentDiv.style.display === "block";
-      contentDiv.style.display = isVisible ? "none" : "block";
-      collapsibleBtn.textContent = groupName + (isVisible ? ` (${recipes.length})` : ` (${recipes.length})`);
+      contentDiv.classList.toggle("open");
+      const isOpen = contentDiv.classList.contains("open");
+      collapsibleBtn.textContent = `${groupName} ${isOpen ? '(-)' : '(+)'}`;
     });
   
     groupContainer.appendChild(collapsibleBtn);
