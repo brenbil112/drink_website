@@ -1,0 +1,85 @@
+const groups = {
+    Vodka: [],
+    Tequila: [],
+    Rum: [],
+    Rye: [],
+    Gin: [],
+    Bourbon: [],
+    "All Others": []
+  };
+  
+  const recipeGroupsContainer = document.getElementById("recipeGroupsContainer");
+  
+  // Group recipes by first ingredient
+  Object.entries(shotRecipes).forEach(([recipeName, recipe]) => {
+    const firstIng = recipe.ingredients[0];
+    if (groups.hasOwnProperty(firstIng)) {
+      groups[firstIng].push({ name: recipeName, data: recipe });
+    } else {
+      groups["All Others"].push({ name: recipeName, data: recipe });
+    }
+  });
+  
+  function createRecipeButton(recipe) {
+    const button = document.createElement("button");
+    button.className = "recipe-btn";
+  
+    // Add recipe name and toggle icon
+    button.innerHTML = `
+      <span class="recipe-name">${recipe.name}</span>
+      <span class="toggle-icon">+</span>
+    `;
+  
+    const detailsDiv = document.createElement("div");
+    detailsDiv.className = "recipe-details";
+    detailsDiv.style.display = "none"; // this is still OK here for nested toggle
+  
+    const ingredients = recipe.data.ingredients?.join(", ") || "N/A";
+  
+    detailsDiv.innerHTML = `
+      <p><strong>Ingredients:</strong> ${ingredients}</p>
+    `;
+  
+    button.addEventListener("click", () => {
+      const isHidden = detailsDiv.style.display === "none";
+      detailsDiv.style.display = isHidden ? "block" : "none";
+  
+      const icon = button.querySelector(".toggle-icon");
+      icon.textContent = isHidden ? "−" : "+";
+    });
+  
+    const wrapper = document.createElement("li");
+    wrapper.appendChild(button);
+    wrapper.appendChild(detailsDiv);
+    return wrapper;
+  }
+  
+  // Create collapsible groups
+  Object.entries(groups).forEach(([groupName, recipes]) => {
+    const groupContainer = document.createElement("div");
+    groupContainer.className = "ingredient-section";
+  
+    const collapsibleBtn = document.createElement("button");
+    collapsibleBtn.type = "button";
+    collapsibleBtn.className = "collapsible";
+    collapsibleBtn.textContent = `${groupName} (+)`;
+  
+    const contentDiv = document.createElement("ul");
+    contentDiv.className = "content"; // default hidden in CSS (display: none)
+  
+    recipes.forEach(recipe => {
+      const recipeBtn = createRecipeButton(recipe);
+      contentDiv.appendChild(recipeBtn);
+    });
+  
+    collapsibleBtn.addEventListener("click", () => {
+      contentDiv.classList.toggle("open");
+      const isOpen = contentDiv.classList.contains("open");
+      collapsibleBtn.textContent = `${groupName} ${isOpen ? '(-)' : '(+)'}`;
+    });
+  
+    groupContainer.appendChild(collapsibleBtn);
+    groupContainer.appendChild(contentDiv);
+    recipeGroupsContainer.appendChild(groupContainer);
+  });
+  
