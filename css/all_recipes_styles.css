@@ -1,22 +1,19 @@
-/* === Container for each ingredient group === */
 .ingredient-section {
     margin-bottom: 24px;
   }
   
-  /* === Collapsible group buttons === */
   .collapsible {
-    background-color: #3399ff;
-    color: white;
-    cursor: pointer;
-    padding: 12px 20px;
     width: 100%;
+    background: #3399ff;
+    color: white;
+    padding: 12px 20px;
     border: none;
     border-radius: 12px;
-    text-align: left;
     font-size: 1.2rem;
     font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 8px;
   }
   
@@ -24,9 +21,8 @@
     background-color: #2277cc;
   }
   
-/* Force the .content container to wrap buttons horizontally */
-.content {
-    display: flex;
+  .content {
+    display: flex !important; /* force flex context */
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 12px;
@@ -35,36 +31,30 @@
     list-style: none;
   }
   
-  /* Ensure list items take up fixed width and can sit side-by-side */
-.content li {
-  display: block;               /* ✅ force block instead of default list-item */
-  flex: 0 0 300px;
-  max-width: 300px;
-  box-sizing: border-box;
-}
-
-ul, li {
-    list-style: none;
-    margin: 0;
+  .content li {
+    /*display: flex;            ensure each li participates in flexbox */
+    flex: 0 0 300px;
+    max-width: 300px;
+    box-sizing: border-box;
     padding: 0;
+    margin: 0;
+    list-style: none;
   }
   
   
-  /* === Recipe buttons === */
   .recipe-btn {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    background-color: #f7f7f7;
+    display: block;
+    background: #f7f7f7;
     border: 2px solid #ccc;
     border-radius: 12px;
     padding: 12px 24px;
     font-size: 1.1rem;
     font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
     text-align: left;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
   }
   
   .recipe-btn:hover {
@@ -72,29 +62,15 @@ ul, li {
     transform: scale(1.02);
   }
   
-  /* === Recipe details toggle block === */
   .recipe-details {
-    margin-top: 4px;
-    background-color: #fff;
-    padding: 10px;
+    margin-top: 6px;
+    background: white;
     border-radius: 8px;
+    padding: 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
   
-  /* === Responsive: 2 per row on tablets === */
-  @media (max-width: 900px) {
-    .content li {
-      flex: 1 1 calc(50% - 12px);
-      max-width: calc(50% - 12px);
-    }
-  }
-  
-  /* === Responsive: stacked on phones === */
   @media (max-width: 600px) {
-    .content {
-      justify-content: center;
-    }
-  
     .content li {
       flex: 1 1 100%;
       max-width: 100%;

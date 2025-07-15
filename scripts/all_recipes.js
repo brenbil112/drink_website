@@ -5,7 +5,7 @@ const groups = {
     Rye: [],
     Tequila: [],
     Vodka: [],
-    "All Others": [],
+    "All Others": []
   };
   
   const recipeGroupsContainer = document.getElementById("recipeGroupsContainer");
@@ -21,11 +21,14 @@ const groups = {
   });
   
   function createRecipeButton(recipe) {
-    const wrapper = document.createElement("li");
-  
     const button = document.createElement("button");
     button.className = "recipe-btn";
-    button.textContent = recipe.name;
+  
+    // Add recipe name and toggle icon
+    button.innerHTML = `
+      <span class="recipe-name">${recipe.name}</span>
+      <span class="toggle-icon">+</span>
+    `;
   
     const detailsDiv = document.createElement("div");
     detailsDiv.className = "recipe-details";
@@ -44,15 +47,20 @@ const groups = {
     `;
   
     button.addEventListener("click", () => {
-      detailsDiv.style.display = detailsDiv.style.display === "none" ? "block" : "none";
+      const isHidden = detailsDiv.style.display === "none";
+      detailsDiv.style.display = isHidden ? "block" : "none";
+  
+      const icon = button.querySelector(".toggle-icon");
+      icon.textContent = isHidden ? "−" : "+";
     });
   
+    const wrapper = document.createElement("li");
     wrapper.appendChild(button);
-  
-    return { wrapper, detailsDiv };
+    wrapper.appendChild(detailsDiv);
+    return wrapper;
   }
   
-  // Create collapsible ingredient groups
+  // Create collapsible groups
   Object.entries(groups).forEach(([groupName, recipes]) => {
     const groupContainer = document.createElement("div");
     groupContainer.className = "ingredient-section";
@@ -60,33 +68,25 @@ const groups = {
     const collapsibleBtn = document.createElement("button");
     collapsibleBtn.type = "button";
     collapsibleBtn.className = "collapsible";
-    collapsibleBtn.textContent = `${groupName} (${recipes.length})`;
+    collapsibleBtn.textContent = groupName + ` (${recipes.length})`;
   
     const contentDiv = document.createElement("ul");
     contentDiv.className = "content";
     contentDiv.style.display = "none";
   
-    const detailsContainer = document.createElement("div");
-    detailsContainer.className = "details-container";
-  
     recipes.forEach(recipe => {
-      const { wrapper, detailsDiv } = createRecipeButton(recipe);
-      contentDiv.appendChild(wrapper);
-      detailsContainer.appendChild(detailsDiv); // placed after flex row
+      const recipeBtn = createRecipeButton(recipe);
+      contentDiv.appendChild(recipeBtn);
     });
   
     collapsibleBtn.addEventListener("click", () => {
       const isVisible = contentDiv.style.display === "block";
       contentDiv.style.display = isVisible ? "none" : "block";
-      detailsContainer.style.display = isVisible ? "none" : "block";
-      collapsibleBtn.textContent = isVisible
-        ? `${groupName} (${recipes.length})`
-        : `${groupName} (-)`;
+      collapsibleBtn.textContent = groupName + (isVisible ? ` (${recipes.length})` : ` (-)`);
     });
   
     groupContainer.appendChild(collapsibleBtn);
     groupContainer.appendChild(contentDiv);
-    groupContainer.appendChild(detailsContainer);
     recipeGroupsContainer.appendChild(groupContainer);
   });
   
