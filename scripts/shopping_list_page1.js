@@ -1,68 +1,61 @@
-// Group recipes by base liquor
-function groupByLiquor(recipes) {
-    const liquorMap = {};
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('shoppingListContainer');
+    const liquorGroups = {};
   
-    Object.entries(recipes).forEach(([name, data]) => {
-      const baseLiquor = data.ingredients[0]; // crude but works if first ingredient is liquor
-      if (!liquorMap[baseLiquor]) liquorMap[baseLiquor] = [];
-      liquorMap[baseLiquor].push({ name, ingredients: data.ingredients });
-    });
+    // Step 1: group recipes by first liquor
+    for (const [name, recipe] of Object.entries(drinkRecipes)) {
+      const liquor = recipe.ingredients[0] || 'Other';
+      if (!liquorGroups[liquor]) {
+        liquorGroups[liquor] = [];
+      }
+      liquorGroups[liquor].push({ name, ingredients: recipe.ingredients });
+    }
   
-    return liquorMap;
-  }
-  
-  // Render collapsible sections
-  function renderShoppingList(recipes) {
-    const container = document.getElementById('shopping-list-container');
-    const grouped = groupByLiquor(recipes);
-  
-    Object.entries(grouped).forEach(([liquor, drinks]) => {
-      const section = document.createElement('section');
-      section.className = 'liquor-section';
-  
+    // Step 2: create collapsible sections
+    Object.entries(liquorGroups).forEach(([liquor, recipes]) => {
       const button = document.createElement('button');
-      button.className = 'collapsible';
+      button.className = 'shopping-collapsible';
       button.textContent = liquor;
   
-      const content = document.createElement('div');
-      content.className = 'content hidden';
+      const section = document.createElement('div');
+      section.className = 'shopping-section';
   
-      drinks.forEach(drink => {
+      recipes.forEach(({ name, ingredients }) => {
+        const row = document.createElement('div');
+        row.className = 'drink-entry';
+  
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = name;
+  
         const label = document.createElement('label');
-        label.innerHTML = `
-          <input type="checkbox" value="${drink.name}"> 
-          <strong>${drink.name}</strong>: ${drink.ingredients.join(', ')}
-        `;
-        content.appendChild(label);
-        content.appendChild(document.createElement('br'));
+        label.innerHTML = `<strong>${name}</strong>: ${ingredients.join(', ')}`;
+  
+        row.appendChild(checkbox);
+        row.appendChild(label);
+        section.appendChild(row);
       });
   
-      section.appendChild(button);
-      section.appendChild(content);
+      button.addEventListener('click', () => {
+        section.classList.toggle('open');
+      });
+  
+      container.appendChild(button);
       container.appendChild(section);
     });
   
-    // Add collapsible functionality
-    document.querySelectorAll('.collapsible').forEach(button => {
-      button.addEventListener('click', () => {
-        button.nextElementSibling.classList.toggle('hidden');
-      });
+    // Step 3: handle "Create Shopping List" button
+    document.getElementById('generateListBtn').addEventListener('click', () => {
+      const checked = document.querySelectorAll('.drink-entry input[type="checkbox"]:checked');
+      const selected = Array.from(checked).map(cb => cb.value);
+  
+      if (selected.length === 0) {
+        alert('Please select at least one recipe.');
+        return;
+      }
+  
+      localStorage.setItem('selectedRecipes', JSON.stringify(selected));
+      window.location.href = 'shopping_results.html';
     });
-  }
-  
-  // Save selected recipes to localStorage and redirect
-  document.getElementById('create-list-btn').addEventListener('click', () => {
-    const selected = [];
-    document.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
-      selected.push(cb.value);
-    });
-  
-    localStorage.setItem('selectedRecipes', JSON.stringify(selected));
-    window.location.href = 'shopping_list_page2.html';
-  });
-  
-  // Wait until DOM is ready then render list
-  document.addEventListener('DOMContentLoaded', () => {
-    renderShoppingList(drinkRecipes);
   });
   

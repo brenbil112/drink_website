@@ -35,3 +35,75 @@
     margin: 8px 0;
   }
   
+  /* Matches collapsible style for liquor sections */
+.shopping-collapsible {
+    width: 100%;
+    background: #3399ff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+  }
+  
+  .shopping-collapsible:hover {
+    background-color: #2277cc;
+  }
+  
+  /* Container for drinks in each section */
+  .shopping-section {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-left: 12px;
+  }
+  
+  /* Display when open */
+  .shopping-section.open {
+    display: flex;
+  }
+  
+  /* Each drink item row */
+  .drink-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+    font-size: 1rem;
+  }
+  
+  /* Checkbox alignment */
+  .drink-entry input[type="checkbox"] {
+    margin-top: 4px;
+  }
+
+  .generate-list-button {
+    background: #2ecc71;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+  
+    /* Limit width */
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 20px auto; /* center horizontally and add bottom space */
+  }
+  
+  .generate-list-button:hover {
+    background-color: #2277cc;
+  }
+  
+  
