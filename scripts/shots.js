@@ -35,6 +35,12 @@ const shotRecipes = {
     "Bourbon Cherry": {
         ingredients: ["Bourbon", "Cherry Liqueur"],
     },
+    "Brain Freeze": {
+        ingredients: ["Vodka", "Blue Curacao", "Sour Mix"],
+    },
+    "Breakfast Shot": {
+        ingredients: ["Jameson", "Butterscotch Schnapps", "Orange Juice"],
+    },
     "Buttery Nipple": {
         ingredients: ["Butterscotch Schnapps", "Baileys"],
     },
@@ -47,6 +53,12 @@ const shotRecipes = {
     "Cinnamon Toast Crunch": {
         ingredients: ["Fireball", "Rumchata"],
     },
+    "Cobra's Fang": {
+        ingredients: ["Rum", "Orange Juice", "Grenadine"],
+    },
+    "Duck Fart": {
+        ingredients: ["Rye", "Baileys", "Kahlúa"],
+    },
     "Gimlet Shot": {
         ingredients: ["Gin", "Lime Juice"],
     },
@@ -54,7 +66,10 @@ const shotRecipes = {
         ingredients: ["Goldschläger", "Rumple Minze"],
     },
     "Green Tea Shot": {
-        ingredients: ["Irish Whiskey", "Peach Schnapps", "Sour Mix"],
+        ingredients: ["Jameson", "Peach Schnapps", "Sour Mix"],
+    },
+    "Gummy Bear": {
+        ingredients: ["Vodka", "Peach Schnapps", "Sour Mix", "Sprite"],
     },
     "Irish Car Bomb": {
         ingredients: ["Irish Whiskey", "Guinness", "Irish Cream"],
@@ -62,7 +77,10 @@ const shotRecipes = {
     "Jägerbomb": {
         ingredients: ["Jägermeister", "Red Bull"],
     },
-    "Kamikaze Shot": {
+    "Jolly Rancher": {
+        ingredients: ["Vodka", "Apple Pucker", "Cranberry Juice"],
+    },
+    "Kamikaze": {
         ingredients: ["Vodka", "Triple Sec", "Lime Juice"],
     },
     "Kool Aid": {
@@ -71,8 +89,14 @@ const shotRecipes = {
     "Lemon Drop": {
         ingredients: ["Vodka", "Lemon Juice", "Simple Syrup"],
     },
+    "Mexican Candy": {
+        ingredients: ["Tequila", "Watermelon Liqueur", "Hot Sauce"],
+    },
     "Mind Eraser": {
         ingredients: ["Vodka", "Kahlúa", "Club Soda"],
+    },
+    "Mini Beer": {
+        ingredients: ["Licor 43", "Baileys"],
     },
     "New York Sour": {
         ingredients: ["Bourbon", "Lemon Juice", "Red Wine"],
@@ -107,6 +131,9 @@ const shotRecipes = {
     "Sangrita": {
         ingredients: ["Tequila", "Tomato Juice", "Lime Juice", "Hot Sauce"],
     },
+    "Scooby Snack": {
+        ingredients: ["Rum", "Midori", "Pineapple Juice", "Cream"],
+    },
     "Sour Patch Kid": {
         ingredients: ["Vodka", "Sour Mix", "Grenadine"],
     },
@@ -118,6 +145,9 @@ const shotRecipes = {
     },
     "Tree Trimmer": {
         ingredients: ["Bourbon", "Peppermint Schnapps", "Crème de Menthe"],
+    },
+    "Water Moccasin": {
+        ingredients: ["Rye", "Peach Schnapps", "Sour Mix"],
     },
     "White Tea Shot": {
         ingredients: ["Vodka", "Peach Schnapps", "Sour Mix", "Sprite"],
