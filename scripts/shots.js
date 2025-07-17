@@ -48,7 +48,7 @@ const shotRecipes = {
         ingredients: ["Baileys", "Lime Juice"],
     },
     "Chocolate Cake": {
-        ingredients: ["Frangelico", "Vodka", "Sugar Rim"],
+        ingredients: ["Vodka", "Frangelico", "Sugar Rim"],
     },
     "Cinnamon Toast Crunch": {
         ingredients: ["Fireball", "Rumchata"],
@@ -72,7 +72,7 @@ const shotRecipes = {
         ingredients: ["Vodka", "Peach Schnapps", "Sour Mix", "Sprite"],
     },
     "Irish Car Bomb": {
-        ingredients: ["Irish Whiskey", "Guinness", "Irish Cream"],
+        ingredients: ["Jameson", "Guinness", "Irish Cream"],
     },
     "Jägerbomb": {
         ingredients: ["Jägermeister", "Red Bull"],

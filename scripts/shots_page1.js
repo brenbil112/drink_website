@@ -2,6 +2,7 @@ const groups = {
     Vodka: [],
     Tequila: [],
     Rum: [],
+    Jameson: [],
     Rye: [],
     Gin: [],
     Bourbon: [],
