@@ -1,18 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('shoppingListContainer');
-    const liquorGroups = {};
   
-    // Step 1: group recipes by first liquor
+    // Predefined liquor categories
+    const liquorCategories = {
+      Bourbon: [],
+      Gin: [],
+      Rum: [],
+      Rye: [],
+      Tequila: [],
+      Vodka: [],
+      "All Others": []
+    };
+  
+    // Step 1: Group recipes by first liquor
     for (const [name, recipe] of Object.entries(drinkRecipes)) {
-      const liquor = recipe.ingredients[0] || 'Other';
-      if (!liquorGroups[liquor]) {
-        liquorGroups[liquor] = [];
-      }
-      liquorGroups[liquor].push({ name, ingredients: recipe.ingredients });
+      const firstIngredient = (recipe.ingredients[0] || "").toLowerCase();
+  
+      let matchedCategory = "All Others";
+      if (firstIngredient.includes("bourbon")) matchedCategory = "Bourbon";
+      else if (firstIngredient.includes("gin")) matchedCategory = "Gin";
+      else if (firstIngredient.includes("rum")) matchedCategory = "Rum";
+      else if (firstIngredient.includes("rye")) matchedCategory = "Rye";
+      else if (firstIngredient.includes("tequila")) matchedCategory = "Tequila";
+      else if (firstIngredient.includes("vodka")) matchedCategory = "Vodka";
+  
+      liquorCategories[matchedCategory].push({ name, ingredients: recipe.ingredients });
     }
   
-    // Step 2: create collapsible sections
-    Object.entries(liquorGroups).forEach(([liquor, recipes]) => {
+    // Step 2: Create collapsible sections
+    Object.entries(liquorCategories).forEach(([liquor, recipes]) => {
+      if (recipes.length === 0) return; // Skip empty sections
+  
       const button = document.createElement('button');
       button.className = 'shopping-collapsible';
       button.textContent = liquor;
@@ -44,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       container.appendChild(section);
     });
   
-    // Step 3: handle "Create Shopping List" button
+    // Step 3: Handle "Create Shopping List" button
     document.getElementById('generateListBtn').addEventListener('click', () => {
       const checked = document.querySelectorAll('.drink-entry input[type="checkbox"]:checked');
       const selected = Array.from(checked).map(cb => cb.value);
@@ -55,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   
       localStorage.setItem('selectedRecipes', JSON.stringify(selected));
-      window.location.href = 'shopping_results.html';
+      window.location.href = 'shopping_list_page2.html';
     });
   });
   
