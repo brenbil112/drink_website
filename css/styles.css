@@ -182,4 +182,15 @@ h1 {
     color: #555;
     margin-bottom: 10px;
   }
+
+  .site-description {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 0 16px;
+    text-align: center;
+  }
+  
   
